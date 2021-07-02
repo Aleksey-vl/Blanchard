@@ -27,57 +27,48 @@
 
 <body>
   <header class="header">
-    <div class="container header__container">
-      <button class="burger" aria-label="Открыть закрыть навигацию по сайту">
-        <span class="burger__element"></span>
-      </button>
-      <a class="header__logo header__logo-img" href="./index.html"><img src="./img/logo.png"
-          alt="логотип Blanchard"></a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__item-text" href="#about-us">О нас</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#gallery">Галерея</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#catalogue">Каталог</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#events">События</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#publications">Издания</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#projects">Проекты</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item-text" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="nav__btn" aria-label="Войти в личный кабинет">
-        <svg class="nav__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-            fill="white" />
-        </svg>
-        <span class="nav__btn-text">Войти</span>
-      </button>
-      <button class="search__btn btn_visible" aria-label="Открыть поиск по сайту">
-        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
-            fill="white" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-            fill="white" />
-        </svg>
-      </button>
-      <form class="search header__search" action="#" aria-label="Поиск по сайту">
-        <button class="search__btn">
+    <div class="container">
+      <div class="header__container">
+        <button class="burger" aria-label="Открыть закрыть навигацию по сайту">
+          <span class="burger__element"></span>
+        </button>
+        <a class="header__logo header__logo-img" href="./index.html"><img src="./img/logo.png"
+            alt="логотип Blanchard"></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__item-text" href="#about-us">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#gallery">Галерея</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#catalogue">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#events">События</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#publications">Издания</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#projects">Проекты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-text" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="nav__btn" aria-label="Войти в личный кабинет">
+          <svg class="nav__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="white" />
+          </svg>
+          <span class="nav__btn-text">Войти</span>
+        </button>
+        <button class="search__btn btn_visible" aria-label="Открыть поиск по сайту">
           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -86,15 +77,22 @@
               fill="white" />
           </svg>
         </button>
-        <input class="search__input" type="search">
-        <button class="btn__reset" type="reset"></button>
-      </form>
-    </div>
-  </header>
-  <main>
-    <section class="banner">
-      <div class="swiper-container banner-container">
-        <div class="banner__row">
+        <form class="search header__search" action="#" aria-label="Поиск по сайту">
+          <button class="search__btn">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <input class="search__input" type="search">
+          <button class="btn__reset" type="reset"></button>
+        </form>
+      </div>
+      <div class="banner__row">
+        <div class="test">
           <nav class="banner__nav">
             <ul class="banner__list">
               <li class="banner__item" tabindex="0">Реализм
@@ -192,39 +190,48 @@
             <input class="search__input" type="search" placeholder="Поиск по сайту">
           </form>
         </div>
-        <div class="banner-contant">
-          <h1 class="banner__title">
-            Прикоснитесь к прекрасному
-          </h1>
-          <p class="banner__text">
-            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
-            новых предложений.
-          </p>
-          <a class="btn banner__btn" href="#contacts">
-            Подписаться на рассылку
-          </a>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide banner1"></div>
-          <div class="swiper-slide banner2"></div>
-          <div class="swiper-slide banner3"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="banner">
+      <div class="swiper-container banner-container">
+        <div class="container">
+          <div class="banner-contant">
+            <h1 class="banner__title">
+              Прикоснитесь к прекрасному
+            </h1>
+            <p class="banner__text">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
+              новых предложений.
+            </p>
+            <a class="btn banner__btn" href="#contacts">
+              Подписаться на рассылку
+            </a>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide banner1"></div>
+            <div class="swiper-slide banner2"></div>
+            <div class="swiper-slide banner3"></div>
+          </div>
         </div>
       </div>
     </section>
     <section class="about-us" id="about-us">
-      <div class="container about-us__container">
-        <h2 class="title">
-          О нас
-        </h2>
-        <p class="text about-us__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
-          однозначно
-          определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних
-          резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за
-          собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество
-          позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных
-          мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных
-          стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а
-          значит, должны быть разоблачены.</p>
+      <div class="container">
+        <div class="about-us__contant">
+          <h2 class="title">
+            О нас
+          </h2>
+          <p class="text about-us__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
+            однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения
+            внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего
+            проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает,
+            что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого
+            ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках
+            спецификации современных стандартов, действия представителей оппозиции набирают популярность среди
+            определенных слоев населения, а значит, должны быть разоблачены.</p>
+        </div>
       </div>
     </section>
     <section class="gallery" id="gallery">

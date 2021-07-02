@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let banner = new Swiper(swiper, {
     slidesPerView: 'auto',
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     loop: true,
   });
 
