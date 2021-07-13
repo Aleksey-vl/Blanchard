@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       document.querySelector(`[data-target="${path}"]`).classList.add('focus-active')
 
-      if (window.matchMedia('(max-width: 768px)').matches){
+      if (window.matchMedia('(max-width: 812px)').matches){
         const goto = document.querySelector(`[data-target="${path}"]`);
         const gotoFocus = goto.getBoundingClientRect().top + pageYOffset;
         window.scrollTo({
@@ -35,22 +35,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //buttons
 
-  const list = document.querySelectorAll('.banner__item');
+  const list = document.querySelectorAll('.banner__item_btn');
+  const drop = document.querySelectorAll('.banner__dropdown')
   const searchBtn = document.querySelector('.btn_visible')
   const modalClouse = document.querySelector('.gallery__focus_clouse');
   const modalOverlay = document.querySelector('.gallery__focus_item');
-  const selectionActive = document.querySelector('.selection-cb__tytle')
+  const selectTytle = document.querySelector('.selection-cb__tytle')
   const burgerMenu = document.querySelector ('.burger');
+  const select = document.querySelectorAll('.selection-cb__item');
+  const selectInput = document.querySelectorAll('.selection-cb__item-in');
 
-  list.forEach(item => {
-    item.addEventListener('click', () => {
-      list.forEach(el => { el.classList.remove('active'); });
-      item.classList.add('active');
-      console.log(list)
-      });
+  // list.forEach(item => {
+  //   item.addEventListener('click', () => {
+  //     list.forEach(el => { el.classList.remove('active'); });
+  //     item.classList.add('active');
+  //     console.log(list)
+  //     });
+  // });
+
+  list.forEach(el => {
+    el.addEventListener('click', (e) => {
+      list.forEach(el => {el.classList.remove(('button-active'))});
+      e.currentTarget.classList.add('button-active');
+      drop.forEach(el => {el.classList.remove(('dropdown-active'))})
+      e.currentTarget.closest('li').querySelector('.banner__dropdown').classList.toggle('dropdown-active');
+    });
   });
 
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  document.addEventListener('click', (e) => {
+    // console.log(e.target)
+    if (!e.target.classList.contains('banner__dropdown') && !e.target.classList.contains('banner__item_btn')) {
+      list.forEach(el => {el.classList.remove(('button-active'))});
+      drop.forEach(el => {el.classList.remove(('dropdown-active'))})
+    };
+  });
+
+  if (window.matchMedia('(max-width: 812px)').matches) {
     searchBtn.addEventListener('click', function () {
       document.querySelector('.header__search').classList.add('visible');
       document.querySelector('.btn_visible').classList.add('invisible');
@@ -59,28 +79,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  if (window.matchMedia('(min-width: 768px)').matches) {
+  if (window.matchMedia('(min-width: 812px)').matches) {
     searchBtn.addEventListener('click', function () {
       document.querySelector('.header__search').classList.add('visible');
       document.querySelector('.btn_visible').classList.add('invisible');
     });
   };
 
-
-  burgerMenu.addEventListener ('click', function () {
-    document.querySelector('.burger').classList.toggle('burger-active')
-    document.querySelector('.nav').classList.toggle('visible')
-    document.querySelector('.nav__btn').classList.toggle('visible')
+  burgerMenu.addEventListener('click', function () {
+    document.querySelector('.burger').classList.toggle('burger-active');
+    document.querySelector('.nav').classList.toggle('visible');
+    document.querySelector('.nav__btn').classList.toggle('visible');
   });
 
   modalClouse.addEventListener('click', (del) => {
     modalOverlay.classList.remove('gallery__focus_active');
-    document.querySelector('body').classList.remove('block')
+    document.querySelector('body').classList.remove('block');
   });
 
-  selectionActive.addEventListener('click', function() {
-    document.querySelector('.selection-cb').classList.toggle('selection-cb__visual')
-    document.querySelector('.selection-cb__tytle').classList.toggle('selection-cb__tytle_active')
+  selectTytle.addEventListener('click', function() {
+    select.forEach(el =>
+      el.classList.toggle('selection-cb__visual')
+    );
+    selectTytle.classList.toggle('selection-cb__tytle_active');
   });
 
 
@@ -134,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 2,
-        spaceBetween: 50,
+        spaceBetween: 30,
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
