@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const selectInput = document.querySelectorAll('.selection-cb__item-in');
   const flagActive = document.querySelectorAll('.flags')
 
+  // list.forEach(item => {
+  //   item.addEventListener('click', () => {
+  //     list.forEach(el => { el.classList.remove('active'); });
+  //     item.classList.add('active');
+  //     console.log(list)
+  //     });
+  // });
+
   list.forEach(el => {
     el.addEventListener('click', (e) => {
       list.forEach(el => {el.classList.remove(('button-active'))});
@@ -113,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuLink.addEventListener('click', (clickLink));
   });
 
-   function clickLink(e) {
+  function clickLink(e) {
     const menuLink = e.target;
     const gotoLink = document.querySelector(menuLink.dataset.link);
     const gotoLinks = gotoLink.getBoundingClientRect().top + pageYOffset;
@@ -442,12 +450,5 @@ document.addEventListener('DOMContentLoaded', function () {
     content: 'В стремлении повысить качество',
     theme: 'light',
   });
-
-  document.querySelectorAll('.header__dropdown').forEach(el=> {
-    new SimpleBar(el, {
-        scrollbarMaxSize: 28,
-    });
-  });
-
 })
 
