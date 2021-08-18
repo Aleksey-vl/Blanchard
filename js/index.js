@@ -99,6 +99,12 @@ document.addEventListener('DOMContentLoaded', function () {
     selectTytle.classList.toggle('selection-cb__tytle_active');
   });
 
+  selectInput.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.currentTarget.closest('li').classList.toggle('selection-cb__select');
+  })
+});
+
   flagActive.forEach(el => {
     el.addEventListener('click', (e) => {
       flagActive.forEach(el => {el.classList.remove(('flag__active'))});
@@ -143,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       320: {
         slidesPerView: 'auto',
-        slidesPerColumn: 1,
+        // slidesPerColumn: 1,
         spaceBetween: 12,
         pagination: {
           el: '.swiper-pagination',
@@ -200,11 +206,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
 
-      1440: {
+      1370: {
         slidesPerView: 3,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
         spaceBetween: 50,
+        allowTouchMove: false,
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
@@ -248,10 +255,11 @@ document.addEventListener('DOMContentLoaded', function () {
           },
         },
 
-        1440: {
+        1370: {
           slidesPerView: 2,
           slidesPerGroup: 1,
           spaceBetween: 70,
+          allowTouchMove: false,
           pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
@@ -266,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
           slidesPerView: 3,
           slidesPerGroup: 1,
           spaceBetween: 50,
+          allowTouchMove: false,
           pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
@@ -284,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
       320: {
         slidesPerView: 'auto',
       },
+
       768: {
         slidesPerView: 2,
         spaceBetween: 50,
@@ -293,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
           prevEl: '.swiper-button-prev',
         },
       },
+
       1024: {
         slidesPerView: 2,
         spaceBetween: 50,
@@ -303,10 +314,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
 
-      1440: {
+      1370: {
         slidesPerView: 2,
         spaceBetween: 50,
         loop: true,
+        allowTouchMove: false,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -317,6 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 3,
         spaceBetween: 50,
         loop: true,
+        allowTouchMove: false,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
