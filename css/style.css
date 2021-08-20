@@ -122,7 +122,7 @@ img {
 .btn:hover {
   color: var(--white);
   background-color: var(--Amethyst-color);
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .btn:active {
@@ -208,7 +208,7 @@ img {
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .swiper-button-prev:active,
@@ -308,12 +308,13 @@ img {
 .nav__item:hover
 .nav__item-text {
   color: var(--Heliotrope-color);
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .nav__item:active
 .nav__item-text {
   color: var(--Purple-color);
+  transition: color .2s ease-in-out;
 }
 
 .nav__item-text:focus-visible {
@@ -323,13 +324,13 @@ img {
 .account-btn:hover
 .account-btn__text {
   color: var(--Heliotrope-color);
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .account-btn:hover
 .account-btn__icon path {
   fill: var(--Heliotrope-color);
-  transition: fill 0.2s ease-in-out;
+  transition: fill .2s ease-in-out;
 }
 
 .account-btn:active
@@ -421,7 +422,7 @@ img {
   height: 0;
   width: 0;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -437,6 +438,7 @@ img {
   width: 2px;
   height: 220px;
   background-color: #000;
+  overflow: auto;
 }
 
 .dropdown__item {
@@ -447,8 +449,6 @@ img {
   border: 2px solid transparent;
   outline: none;
   background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .dropdown__item:not(:last-child) {
@@ -474,8 +474,7 @@ img {
   margin: 0;
   padding: 0px 0px 0px 14px;
   width: 218px;
-  height: 100%;
-  border: 0;
+  height: 40px;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -485,36 +484,37 @@ img {
 }
 
 .dropdown__item-text:focus-visible {
-  outline: 2px solid var(--Amethyst-color);
+  border: 2px solid var(--Amethyst-color);
   background-color: var(--can-can);
+  transition: border .5s ease-in-out;
 }
 
 .dropdown__item:hover {
   border: 2px solid var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .dropdown__item-text:active {
   background-color: var(--Heliotrope-color-lite);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .item__btn:hover {
   color: var(--Amethyst-color);
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .item__btn:hover:after {
   border-color: transparent var(--Amethyst-color) var(--Amethyst-color) transparent;
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .dropdown-active {
   padding: 40px;
   width: 304px;
-  height: 290px;
+  height: 300px;
   opacity: 1;
-  transition: 0.2s ease-out;
+  transition: .2s ease-out;
 }
 
 .button-active {
@@ -525,7 +525,7 @@ img {
   top: 10px;
   right: 0px;
   border-color: var(--Amethyst-color) transparent transparent var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .button-active:hover:after {
@@ -558,7 +558,7 @@ img {
 
 .search__input:hover {
   border-bottom: 1px solid var(--Amethyst-color);
-  transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom .2s ease-in-out;
 }
 
 .search__input:focus {
@@ -836,13 +836,13 @@ img {
 .choices__inner:focus-visible {
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .choices__item--choice:hover,
 .choices__inner:focus-visible {
   background-color: rgba(255, 255, 255, 0.2);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .choices__list--dropdown .choices__item {
@@ -873,13 +873,13 @@ img {
   border: 1px solid;
   border-color: transparent var(--white) var(--white) transparent;
   transform: rotate(45deg);
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color .2s ease-in-out;
 }
 
 .choices[data-type*=select-one].is-open:after {
   top: 30px;
   border-color: var(--white) transparent transparent var(--white);
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color .2s ease-in-out;
 }
 
 .link {
@@ -889,7 +889,7 @@ img {
 
 .link:hover {
   border-bottom: 1px solid var(--Amethyst-color);
-  transition: border 0.1s ease-in-out;
+  transition: border .1s ease-in-out;
 }
 
 .link:active {
@@ -1009,12 +1009,12 @@ img {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.4);
   transform: translate(-50%, -50%);
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .gallery__hover:hover {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .gallery__hover:active {
@@ -1046,7 +1046,7 @@ img {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
   overflow: auto;
 }
 
@@ -1061,7 +1061,7 @@ img {
 .gallery__focus_active {
   z-index: 3;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .gallery__focus_img {
@@ -1178,7 +1178,7 @@ img {
 .flags:hover,
 .flags:focus {
   box-shadow: 0px 0px 10px rgba(157, 92, 208, 0.7);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .flags__active:hover,
@@ -1232,7 +1232,7 @@ img {
   width: auto;
   height: auto;
   opacity: 1;
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .painter__focus_img {
@@ -1275,7 +1275,7 @@ img {
 .painter__item:hover {
   border-top: 1px solid var(--Amethyst-color);
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__item:active {
@@ -1285,7 +1285,7 @@ img {
 .painter__item:hover
 .painter__list-title {
   color: var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__item:active
@@ -1306,25 +1306,25 @@ img {
 .painter__item:hover
 .painter__list-icon {
   background-color: var(--Biloba-Flower-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__item:hover+
 .painter__item {
   border-top: 1px solid var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__item:active+
 .painter__item {
   border-top: 1px solid var(--Purple-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__item:last-child:hover {
   border-top: 1px solid var(--Amethyst-color);
   border-bottom: 1px solid var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__list_heading {
@@ -1417,7 +1417,7 @@ img {
 .painter__checklist-btn:hover {
   border-bottom: 2px solid var(--Amethyst-color);
   color: var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .painter__checklist-btn:active {
@@ -1482,7 +1482,7 @@ img {
   margin: 0px 0px 50px 0px;
   max-width: 500px;
   min-height: 700px;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .events__item:not(:nth-child(3n)) {
@@ -1532,7 +1532,7 @@ img {
 
 .events__more:hover {
   color: var(--Purple-color);
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .events__more:focus-visible {
@@ -1583,7 +1583,7 @@ img {
   min-height: 700px;
   height: auto;
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 /* publications */
@@ -1691,13 +1691,13 @@ img {
 .selection-cb__item:hover
 .selection-cb__item-text {
   color: var(--Amethyst-color);
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .selection-cb__item:hover
 .selection-cb__item-text::before {
   border: 1px solid var(--Amethyst-color);
-  transition: border 0.2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 .price__tytle {
@@ -1752,7 +1752,7 @@ img {
 .price__select_item:hover,
 .price__select_item:focus {
   background-color: var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .price__select_item:active {
@@ -1933,7 +1933,7 @@ img {
 .tulltip:hover {
   color: var(--white);
   background-color: var(--Amethyst-color);
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .tippy-box[data-theme~='light'] {
@@ -2017,55 +2017,55 @@ img {
 .partner1:hover,
 .partner1:focus {
   background-image: url('../img/projects/partner1h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner2:hover,
 .partner2:focus {
   background-image: url('../img/projects/partner2h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner3:hover,
 .partner3:focus {
   background-image: url('../img/projects/partner3h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner4:hover,
 .partner4:focus {
   background-image: url('../img/projects/partner4h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner5:hover,
 .partner5:focus {
   background-image: url('../img/projects/partner5h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner6:hover,
 .partner6:focus {
   background-image: url('../img/projects/partner6h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner7:hover,
 .partner7:focus {
   background-image: url('../img/projects/partner7h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner8:hover,
 .partner8:focus {
   background-image: url('../img/projects/partner8h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partner9:hover,
 .partner9:focus {
   background-image: url('../img/projects/partner9h.jpg');
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .partners__button-prev {
@@ -2180,7 +2180,7 @@ img {
 
 .feedback-block__text:hover {
   background-color: #eaeaea;
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .feedback-block__text:focus-visible {
@@ -2210,7 +2210,7 @@ img {
 .feedback-icon:hover,
 .feedback-icon:focus {
   opacity: 0.6;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 .feedback-icon:active
@@ -2247,7 +2247,7 @@ svg {
 .footer-icon:hover
 path {
   fill: var(--white);
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .footer-icon:focus
@@ -4062,7 +4062,7 @@ path {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: none;
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity .2s ease-in-out;
   }
 
   .selection-cb__tytle_active {

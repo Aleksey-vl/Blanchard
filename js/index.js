@@ -458,7 +458,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.header__dropdown').forEach(el=> {
     new SimpleBar(el, {
-        scrollbarMaxSize: 28,
+      scrollbarMaxSize: 28,
     });
   });
 
