@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="./css/simplebar.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/choices.min.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -16,8 +15,7 @@
   <script src="./js/inputmask.min.js"></script>
   <script src="./js/just-validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./js/choices.min.js"></script>
@@ -950,11 +948,11 @@
         <div class="catalogue__title">
           <h2 class="title catalogue__title_text">Каталог</h2>
           <div class="flags__block">
-            <button class="flags flag1" aria-label="Язык перевода Франция"></button>
-            <button class="flags flag2" aria-label="Германия"></button>
-            <button class="flags flag3 flag__active" aria-label="Италия"></button>
-            <button class="flags flag4" aria-label="Россия"></button>
-            <button class="flags flag5" aria-label="Бельгия"></button>
+            <button class="flags france" data-flag="france" aria-label="Язык перевода Франция"></button>
+            <button class="flags germany" data-flag="germany" aria-label="Германия"></button>
+            <button class="flags italy flag__active" data-flag="italy" aria-label="Италия"></button>
+            <button class="flags russia" data-flag="russia" aria-label="Россия"></button>
+            <button class="flags belgium" data-flag="belgium" aria-label="Бельгия"></button>
           </div>
         </div>
         <p class="text catalogue-text">Акционеры крупнейших компаний, которые представляют собой яркий пример
@@ -1052,7 +1050,7 @@
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
-          <div class="painter__focus focus-active" data-target="Доменико Гирландайо">
+          <div class="painter__focus focus-active" data-target="Доменико Гирландайо" data-art="italy">
             <img class="painter__focus_img" src="./img/catalog/Ghirlandaio.jpg" alt="Доменико Гирландайо">
             <h3 class="painter__focus_title">Доменико Гирландайо</h3>
             <p class="year painter__focus_year">2 июня 1448 — 11 января 1494.</p>
@@ -1158,260 +1156,682 @@
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
-          <ul class="painter__list" id="accordion">
-            <li class="painter__item top">
-              <div class="painter__list_heading" aria-label="Деятели исскуства" role="tablist">
-                <h3 class="painter__list-title">C 1400 по 1499 гг.</h3>
-                <div class="painter__list-icon">
-                  <span></span>
-                </div>
+          <div class="painter__focus" data-target="Биго, Трофим" data-art="france">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Биго, Трофим">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="Дюве, Жан">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Дюве, Жан">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="Дюмустье, Жоффруа">
+            <img class="painter__focus_img" src="./img/catalog/Dumoustier.jpg" alt="Дюмустье, Жоффруа">
+            <h3 class="painter__focus_title">Жоффруа Дюмустье</h3>
+            <p class="year painter__focus_year">1500 (1510) — 13 октября 1573.</p>
+            <p class="text painter__focus_text">Художник драматического дарования, часто использовал резкие контрасты
+              света и тени, его работы отличаются повышенной экспрессивностью. Нервные штрихи переходят в небрежные
+              пятна, автору свойственны широта восприятия мира и буйный темперамент.</p>
+          </div>
+          <div class="painter__focus" data-target="Кнеллер, Готфрид" data-art="germany">
+            <img class="painter__focus_img" src="./img/catalog/Godfrey_Kneller_Selfportrait.jpg" alt="Кнеллер, Готфрид">
+            <h3 class="painter__focus_title">Го́тфрид Кне́ллер</h3>
+            <p class="year painter__focus_year">8 августа 1646 — 19 октября 1723.</p>
+            <p class="text painter__focus_text">Cостоял до конца своей жизни королевским придворным живописцем и
+              исполнял заказы, во множестве сыпавшиеся к нему со стороны английской знати. Большой успех имели его
+              портреты десяти красавиц двора Вильгельма III, созданные в подражание аналогичной серии его
+              предшественника Питера Лели. Для зала заседаний виговского клуба «Кит-Кэт» создал не менее сорока
+              портретов его членов; этот формат портрета (чуть меньше поясного) получил название «кит-кэт».</p>
+          </div>
+          <div class="painter__focus" data-target="Лингельбах, Иоганн">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Лингельбах, Иоганн">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="Прейслер, Даниэль">
+            <img class="painter__focus_img" src="./img/catalog/DanielPreiseler.jpg" alt="Прейслер, Даниэль">
+            <h3 class="painter__focus_title">Даниэль Прейслер</h3>
+            <p class="year painter__focus_year">1627 — 1665.</p>
+            <p class="text painter__focus_text">Основатель известного семейства немецких художников, выходцев из
+              Богемии.Из его картин в особенности известны: «Смерть Авеля», «Сошествие Св. Духа» (в госпитальной церкви
+              в Нюрнберге), «Вознесение Господне» (в дворцовой капелле в том же городе) и мужской портрет (в
+              Брауншвейгской галерее).</p>
+          </div>
+          <div class="painter__focus" data-target="Флегель, Георг">
+            <img class="painter__focus_img" src="./img/catalog/Georg.jpg" alt="Флегель, Георг">
+            <h3 class="painter__focus_title">Георг Флегель</h3>
+            <p class="year painter__focus_year">1566 — 23 марта 1638.</p>
+            <p class="text painter__focus_text">Считается первым немецким художником, писавшим натюрморты, и одним из
+              крупнейших европейских мастеров этого жанра в начале XVII столетия. Также Флегель является создателем
+              большого количества акварелей, изображающих цветы, зачастую в натуральную величину.</p>
+          </div>
+          <div class="painter__focus" data-target="Акимов, Иван Акимович" data-art="russia">
+            <img class="painter__focus_img" src="./img/catalog/Akimov_Ivan_Akimovich.jpg" alt="Акимов, Иван Акимович">
+            <h3 class="painter__focus_title">Ива́н Аки́мович Аки́мов</h3>
+            <p class="year painter__focus_year">22 мая (2 июня) 1755 — 5 (27) мая 1814.</p>
+            <p class="text painter__focus_text">Обладал преподавательским даром и имел весьма большое влияние на
+              образование русских исторических живописцев, хотя сам не был первоклассным художником, в частности, по
+              своим произведениям ставился ниже своего современника Г. И. Угрюмова. Иван Акимович был, возможно, одним
+              из первых историографов русского искусства. Хорошо известна его статья «Краткое историческое известие о
+              некоторых Российских художниках, „Северный вестник“, СПБ. 1804, ч. 1, № 3.». Занимался также драматической
+              литературой.</p>
+          </div>
+          <div class="painter__focus" data-target="Бельский, Алексей Иванович">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бельский, Алексей Иванович">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="Вишняков, Александр Иванович">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Вишняков, Александр Иванович">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="Иванов, Андрей Иванович">
+            <img class="painter__focus_img" src="./img/catalog/Painter_Andrey_Ivanov.jpg" alt="Иванов, Андрей Иванович">
+            <h3 class="painter__focus_title">Иванов, Андрей Иванович</h3>
+            <p class="year painter__focus_year">1775 — 12 (24) июля 1848.</p>
+            <p class="text painter__focus_text">В живописи придерживался академической системы построения исторической
+              картины. Его произведения, отличавшиеся прекрасным академическим рисунком и тонким колоритом, высоко
+              ценились современниками. Андрей Иванович был выдающимся представителем старо-академической школы: отличный
+              рисовальщик, прекрасно понимающий композицию, он писал свободно и в то же время добивался особого
+              совершенства в моделировании формы.</p>
+          </div>
+          <div class="painter__focus" data-target="Лапин, Иван Фёдорович">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Лапин, Иван Фёдорович">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+          <div class="painter__focus" data-target="#" data-art="belgium">
+            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="#">
+            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus_year"></p>
+            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+              посмотреть!</p>
+            <a class="link" data-link=".gallery" href="#">В галерею</a>
+          </div>
+        <ul class="painter__list" id="accordion">
+          <li class="painter__item">
+            <div class="painter__list_heading top" aria-label="Деятели исскуства" role="tablist">
+              <h3 class="painter__list-title">C 1400 по 1499 гг.</h3>
+              <div class="painter__list-icon">
+                <span></span>
               </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist filter">
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Бенедетто ди Биндо">
-                      Бенедетто ди Биндо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Бергоньоне, Амброджо">
-                      Бергоньоне, Амброджо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Биссоло, Франческо">
-                      Биссоло, Франческо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Больтраффио, Джованни">
-                      Больтраффио, Джованни
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Бонсиньори, Франческо">
-                      Бонсиньори, Франческо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Боттичини, Рафаэлло">
-                      Боттичини, Рафаэлло
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Брамантино">
-                      Брамантино
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Бреа, Людовико">
-                      Бреа, Людовико
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Бьяджо д’Антонио Туччи">
-                      Бьяджо д’Антонио Туччи
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Веккьетта">
-                      Веккьетта
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Андреа Верроккьо">
-                      Андреа Верроккьо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Доменико Гирландайо">
-                      Доменико Гирландайо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Беноццо Гоццоли">
-                      Беноццо Гоццоли
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Граначчи, Франческо">
-                      Граначчи, Франческо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Грегорио ди Чекко">
-                      Грегорио ди Чекко
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Джованни да Удине">
-                      Джованни да Удине
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Джованни ди Паоло">
-                      Джованни ди Паоло
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Джорджоне">
-                      Джорджоне
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Парентино, Бернардо">
-                      Парентино, Бернардо
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Пезеллино">
-                      Пезеллино
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Пьетро Перуджино">
-                      Пьетро Перуджино
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Перуцци, Бальдассаре">
-                      Перуцци, Бальдассаре
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Пизанелло">
-                      Пизанелло
-                    </button>
-                  </li>
-                  <li class="painter__checklist-item">
-                    <button class="painter__checklist-btn" data-path="Пинтуриккьо">
-                      Пинтуриккьо
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 1500 по 1599 гг.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist filter">
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Бенедетто ди Биндо">
+                    Бенедетто ди Биндо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Бергоньоне, Амброджо">
+                    Бергоньоне, Амброджо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Биссоло, Франческо">
+                    Биссоло, Франческо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Больтраффио, Джованни">
+                    Больтраффио, Джованни
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Бонсиньори, Франческо">
+                    Бонсиньори, Франческо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Боттичини, Рафаэлло">
+                    Боттичини, Рафаэлло
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Брамантино">
+                    Брамантино
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Бреа, Людовико">
+                    Бреа, Людовико
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Бьяджо д’Антонио Туччи">
+                    Бьяджо д’Антонио Туччи
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Веккьетта">
+                    Веккьетта
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Андреа Верроккьо">
+                    Андреа Верроккьо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Доменико Гирландайо">
+                    Доменико Гирландайо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Беноццо Гоццоли">
+                    Беноццо Гоццоли
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Граначчи, Франческо">
+                    Граначчи, Франческо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Грегорио ди Чекко">
+                    Грегорио ди Чекко
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Джованни да Удине">
+                    Джованни да Удине
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Джованни ди Паоло">
+                    Джованни ди Паоло
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Джорджоне">
+                    Джорджоне
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Парентино, Бернардо">
+                    Парентино, Бернардо
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Пезеллино">
+                    Пезеллино
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Пьетро Перуджино">
+                    Пьетро Перуджино
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Перуцци, Бальдассаре">
+                    Перуцци, Бальдассаре
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Пизанелло">
+                    Пизанелло
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <button class="painter__checklist-btn" data-path="Пинтуриккьо">
+                    Пинтуриккьо
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 1600 по 1699 гг.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 1700 по 1799 гг.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 1800 по 1899 гг.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 1900 по 1999 гг.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top">
+              <h3 class="painter__list-title">C 1500 по 1599 гг.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <button class="painter__checklist-btn" data-path="Биго, Трофим">
+                    Биго, Трофим
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="france">
+                  <button class="painter__checklist-btn" data-path="Дюве, Жан">
+                    Дюве, Жан
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="france">
+                  <button class="painter__checklist-btn" data-path="Дюмустье, Жоффруа">
+                    Дюмустье, Жоффруа
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="painter__item top bottom">
-              <div class="painter__list_heading">
-                <h3 class="painter__list-title">C 2000 г.</h3>
-                <div class="painter__list-icon"></div>
-              </div>
-              <div class="painter__list-text">
-                <ul class="painter__checklist">
-                  <li class="painter__checklist-item">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img"></div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                        <a class="link" data-link=".gallery" href="#">В галерею</a>
-                      </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top">
+              <h3 class="painter__list-title">C 1600 по 1699 гг.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <button class="painter__checklist-btn" data-path="Кнеллер, Готфрид">
+                    Кнеллер, Готфрид
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <button class="painter__checklist-btn" data-path="Лингельбах, Иоганн">
+                    Лингельбах, Иоганн
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <button class="painter__checklist-btn" data-path="Прейслер, Даниэль">
+                    Прейслер, Даниэль
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <button class="painter__checklist-btn" data-path="Флегель, Георг">
+                    Флегель, Георг
+                  </button>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top">
+              <h3 class="painter__list-title">C 1700 по 1799 гг.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <button class="painter__checklist-btn" data-path="Акимов, Иван Акимович">
+                    Акимов, Иван Акимович
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <button class="painter__checklist-btn" data-path="Бельский, Алексей Иванович">
+                    Бельский, Алексей Иванович
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <button class="painter__checklist-btn" data-path="Вишняков, Александр Иванович">
+                    Вишняков, Александр Иванович
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <button class="painter__checklist-btn" data-path="Иванов, Андрей Иванович">
+                    Иванов, Андрей Иванович
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <button class="painter__checklist-btn" data-path="Лапин, Иван Фёдорович">
+                    Лапин, Иван Фёдорович
+                  </button>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top">
+              <h3 class="painter__list-title">C 1800 по 1899 гг.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top">
+              <h3 class="painter__list-title">C 1900 по 1999 гг.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="painter__item">
+            <div class="painter__list_heading top bottom">
+              <h3 class="painter__list-title">C 2000 г.</h3>
+              <div class="painter__list-icon"></div>
+            </div>
+            <div class="painter__list-text">
+              <ul class="painter__checklist">
+                <li class="painter__checklist-item" data-artist="france">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="germany">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item artist-active" data-artist="italy">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="russia">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="painter__checklist-item" data-artist="belgium">
+                  <div class="checklist-item__fall">
+                    <div class="fall_img"></div>
+                    <div class="fall_text_block">
+                      <h3 class="fall_title">Здесь пока пусто</h3>
+                      <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <a class="link" data-link=".gallery" href="#">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
         </div>
       </div>
     </section>
@@ -1763,7 +2183,7 @@
             <h3 class="projects__partners contacts__office">Шоурум №2</h3>
             <address class="year contacts__address">Леонтьевский переулок, дом 5/1</address>
             <h3 class="feedback-title">Заказать обратный звонок</h3>
-            <form action="#" class="feedback-block">
+            <form class="feedback-block" action="#">
               <label>
                 <span class="feedback__block_tultip">
                   <input class="feedback-block__text" type="text" name="name" placeholder="Имя*"

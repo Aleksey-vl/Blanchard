@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  document.querySelectorAll('.flags').forEach(function (step) {
+    step.addEventListener('click', function (event) {
+      const flag = event.currentTarget.dataset.flag
+
+      document.querySelectorAll('.painter__checklist-item').forEach(function (tabContent) {
+        tabContent.classList.remove('artist-active')
+      });
+
+      document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
+        tabContent.classList.remove('focus-active')
+      });
+
+      document.querySelector(`[data-art="${flag}"]`).classList.add('focus-active');
+      document.querySelectorAll(`[data-artist="${flag}"]`).forEach(el => {el.classList.add('artist-active')});
+    });
+  });
+
   //buttons
 
   const list = document.querySelectorAll('.item__btn');
@@ -102,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
   selectInput.forEach(el => {
     el.addEventListener('click', (e) => {
       e.currentTarget.closest('li').classList.toggle('selection-cb__select');
-  })
-});
+    });
+  });
 
   flagActive.forEach(el => {
     el.addEventListener('click', (e) => {
