@@ -1233,7 +1233,10 @@ img {
 
 .painter__focus_img {
   margin: 0px 0px 27px 0px;
+  width: auto;
   max-height: 470px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .painter__focus_title {
@@ -1249,6 +1252,10 @@ img {
   margin: 0px 0px 5px 0px;
 }
 
+.painter__focus_text {
+  margin: 0px 0px 15px 0px;
+}
+
 .painter__list {
   margin: 0;
   padding: 0;
@@ -1257,6 +1264,7 @@ img {
 
 .painter__item {
   min-width: 800px;
+  cursor: pointer;
 }
 
 .painter__list_heading {
@@ -1434,6 +1442,7 @@ img {
 
 .artist-active>.checklist-item__fall {
   display: flex;
+  align-items: center;
 }
 
 .painter__sub-checklist_item:not(:last-child) {
@@ -1467,6 +1476,10 @@ img {
   background-color: var(--Heliotrope-color);
 }
 
+.cheklist-btn_active {
+  color: var(--Amethyst-color);
+}
+
 .checklist-item__fall {
   display: none;
   max-width: 850px;
@@ -1475,10 +1488,17 @@ img {
 .fall_img {
   width: 251px;
   height: 165px;
-  margin: 0px 36px 0px 0px;
   background-color: #b7b7b7;
-  outline: 2px solid #b7b7b7;
-  outline-offset: 12px;
+}
+
+.fall_img-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 24px 0px 0px;
+  width: 275px;
+  height: 189px;
+  border: 2px solid #b7b7b7;
 }
 
 .fall_text_block {
@@ -1889,7 +1909,6 @@ img {
   color: var(--white);
 }
 
-
 .publications-button-prev {
   position: relative;
   top: 30px;
@@ -2165,12 +2184,12 @@ img {
 
 .contacts__content {
   display: flex;
+  height: 700px;
 }
 
 .contacts__block {
   padding: 124px 0px 0px 0px;
   max-width: 520px;
-  min-height: 682px;
   width: 100%;
 }
 
@@ -2258,7 +2277,8 @@ svg {
 
 .contacts__map {
   width: 100%;
-  height: 700px;
+  /* height: 700px; */
+  height: 100%;
 }
 
 [class*="ground-pane"] {
@@ -2743,8 +2763,22 @@ path {
   .fall_img {
     width: 173px;
     height: 114px;
-    margin: 0px 36px 0px 0px;
-    outline-offset: 8px;
+  }
+
+  .fall_img-line {
+    margin: 0px 25px 0px 0px;
+    width: 189px;
+    height: 130px;
+  }
+
+  .fall_text {
+    line-height: 22px;
+  }
+
+  .fall_text_block {
+    position: absolute;
+    right: 50px;
+    width: 220px;
   }
 
   /* events */
@@ -2834,7 +2868,7 @@ path {
   }
 
   .pablic {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 12px 0px;
     width: 290px;
     height: 320px;
   }
@@ -2879,32 +2913,41 @@ path {
     width: 100%;
   }
 
+  .projects__partners {
+    margin: 0px 0px 20px 0px;
+  }
+
   .projects-swiper {
     max-width: 820px;
     min-height: 130px;
   }
 
   .partners__button-prev {
-    top: 69px;
+    top: 72px;
     left: 0;
   }
 
   .partners__button-next {
-    top: 69px;
+    top: 72px;
     right: 0;
   }
 
   /* contacts */
   .contacts {
-    padding: 17px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
   }
 
   .contacts__container {
     padding: 0px 0px 0px 50px;
   }
 
+  .contacts__block {
+    padding: 123px 0px 0px 0px;
+    max-width: 435px;
+  }
+
   .contacts__office {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 8px 0px;
   }
 
   .contacts__address {
@@ -2917,12 +2960,6 @@ path {
 
   .feedback-block {
     margin: 0px 0px 38px 0px;
-  }
-
-  .contacts__block {
-    padding: 120px 0px 0px 0px;
-    max-width: 435px;
-    min-height: 700px;
   }
 
   .feedback-title {
@@ -3053,7 +3090,7 @@ path {
 
   /* catalogy */
   .catalogue {
-    padding: 80px 0px 45px 0px;
+    padding: 80px 0px 30px 0px;
   }
 
   .catalogue__title_text {
@@ -3115,8 +3152,18 @@ path {
   .fall_img {
     width: 251px;
     height: 165px;
-    margin: 0px 36px 0px 0px;
-    outline-offset: 12px;
+  }
+
+  .fall_img-line {
+    margin: 0px 24px 0px 0px;
+    width: 275px;
+    height: 189px;
+  }
+
+  .fall_text_block {
+    position: relative;
+    right: 0;
+    width: 280px;
   }
 
   /* events */
@@ -3238,10 +3285,7 @@ path {
     min-height: 540px;
   }
 
-  .publications-button-prev {
-    top: 31px;
-  }
-
+  .publications-button-prev,
   .publications-button-next {
     top: 31px;
   }
@@ -3291,12 +3335,16 @@ path {
     padding: 0px 0px 0px 50px;
   }
 
+  .contacts__content {
+    height: 700px;
+  }
+
   .contacts__block {
     padding: 124px 0px 0px 0px;
   }
 
   .contacts__office {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 8px 0px;
   }
 
   .footer__text {
@@ -3515,13 +3563,8 @@ path {
     flex-direction: column-reverse;
   }
 
-  .contacts__map {
-    height: 300px;
-  }
-
   .contacts__block {
     padding: 50px 0px 0px 0px;
-    min-height: 600px;
   }
 
   .footer__container {
@@ -3752,11 +3795,7 @@ path {
     margin: 0px 10px;
   }
 
-  .gallery-button-prev {
-    top: 403px;
-    left: 0;
-  }
-
+  .gallery-button-prev,
   .gallery-button-next {
     top: 403px;
     left: 0;
@@ -3819,8 +3858,12 @@ path {
   .fall_img {
     width: 79px;
     height: 118px;
-    margin: 0px 31px 0px 0px;
-    outline-offset: 5px;
+  }
+
+  .fall_img-line {
+    margin: 0px 25px 0px 0px;
+    width: 90px;
+    height: 130px;
   }
 
   .fall_text_block {
@@ -3838,7 +3881,7 @@ path {
 
   /* catalogy */
   .catalogue {
-    padding: 50px 0px 25px 0px;
+    padding: 50px 0px 20px 0px;
   }
 
   .catalogue__title {
@@ -3923,6 +3966,7 @@ path {
 
   .painter__focus_img {
     margin: 0px 0px 18px 0px;
+    width: inherit;
   }
 
   .painter__focus_title {
@@ -3931,7 +3975,7 @@ path {
 
   /* events */
   .events {
-    padding: 25px 0px 43px 0px;
+    padding: 15px 0px 43px 0px;
   }
 
   .events__item:nth-child(2n+1) {
@@ -4238,13 +4282,14 @@ path {
 
   .partners__button-prev,
   .partners__button-next {
-    top: 40px;
+    top: 39px;
   }
 
   /* contacts */
   .contacts__content {
     position: relative;
     flex-direction: column-reverse;
+    height: 747px;
   }
 
   .contacts__title {
@@ -4252,7 +4297,9 @@ path {
   }
 
   .contacts__map {
-    height: 320px;
+    margin: 0px 0px 5px 0px;
+    padding: 60px 0px 0px 0px;
+    height: 400px;
   }
 
   .contacts__office {
@@ -4268,8 +4315,8 @@ path {
   }
 
   .contacts__block {
-    padding: 24px 0px 0px 0px;
-    min-height: 372px;
+    padding: 17px 0px 0px 0px;
+    min-height: 365px;
   }
 
   .feedback-title {
@@ -4292,12 +4339,6 @@ path {
 
   .feedback-block {
     margin: 0px 0px 20px 0px;
-  }
-
-  .contacts__map {
-    margin: 0px 0px 5px 0px;
-    padding: 60px 0px 0px 0px;
-    height: 370px;
   }
 
   .feedback-block__text {

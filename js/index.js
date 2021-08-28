@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
         tabContent.classList.remove('focus-active')
       });
+      document.querySelectorAll('.painter__checklist-btn').forEach(function (tabContent) {
+        tabContent.classList.remove('cheklist-btn_active')
+      });
       document.querySelector(`[data-target="${path}"]`).classList.add('focus-active')
+
+      step.classList.add('cheklist-btn_active')
 
       if (window.matchMedia('(max-width: 812px)').matches){
         const goto = document.querySelector(`[data-target="${path}"]`);
@@ -378,8 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // accordion
   $(function () {
     $("#accordion").accordion({
-      active: false,
-      collapsible: true,
       heightStyle: "content"
     });
   });
