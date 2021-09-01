@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   selectInput.forEach(el => {
     el.addEventListener('click', (e) => {
-      e.currentTarget.closest('li').classList.toggle('selection-cb__select');
+      e.currentTarget.closest('label').classList.toggle('selection-cb__select');
     });
   });
 
