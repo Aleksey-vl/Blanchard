@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
     selectTytle.classList.toggle('selection-cb__tytle_active');
   });
 
-  selectInput.forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.currentTarget.closest('label').classList.toggle('selection-cb__select');
-    });
-  });
+  // selectInput.forEach(el => {
+  //   el.addEventListener('click', (e) => {
+  //     e.currentTarget.closest('label').classList.toggle('selection-cb__select');
+  //   });
+  // });
 
   flagActive.forEach(el => {
     el.addEventListener('click', (e) => {
