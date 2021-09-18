@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchBtn = document.querySelector('.search-visible')
   const modalClouse = document.querySelectorAll('.gallery__focus_clouse');
   const modalOverlay = document.querySelectorAll('.gallery__focus_item');
-  const selectTytle = document.querySelector('.selection-cb__tytle')
+  const selectTitle = document.querySelector('.selection-cb__title')
   const burgerMenu = document.querySelector ('.burger');
   const select = document.querySelectorAll('.selection-cb__item');
   const selectInput = document.querySelectorAll('.selection-cb__item-in');
@@ -114,11 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  selectTytle.addEventListener('click', function() {
+  selectTitle.addEventListener('click', function() {
     select.forEach(el =>
       el.classList.toggle('selection-cb__visual')
     );
-    selectTytle.classList.toggle('selection-cb__tytle_active');
+    selectTitle.classList.toggle('selection-cb__title_active');
   });
 
   // selectInput.forEach(el => {
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function () {
       center: [55.75846806898367, 37.60108849999989],
       // Уровень масштабирования. Допустимые значения:
       // от 0 (весь мир) до 19.
-      zoom: 7
+      zoom: 12
     });
     // Создание геообъекта с типом точка (метка).
     // var myGeoObject = new ymaps.GeoObject({
@@ -414,8 +414,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
       iconLayout: 'default#image',
-      // iconImageHref: './img/iconmap.svg',
-      iconImageSize: [30, 42],
+      iconImageHref: './img/mapPoint.svg',
+      iconImageSize: [20, 20],
       // iconImageOffset: [-3, -42]
     });
     // Размещение геообъекта на карте.
@@ -464,16 +464,19 @@ document.addEventListener('DOMContentLoaded', function () {
   tippy('.tulltip1', {
     content: 'Пример современных тенденций - современная методология разработки',
     theme: 'light',
+    maxWidth: 264,
   });
 
   tippy('.tulltip2', {
     content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
     theme: 'light',
+    maxWidth: 242,
   });
 
   tippy('.tulltip3', {
     content: 'В стремлении повысить качество',
     theme: 'light',
+    maxWidth: 264,
   });
 
   document.querySelectorAll('.header__dropdown').forEach(el=> {
