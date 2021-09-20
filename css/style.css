@@ -2010,9 +2010,10 @@ input::-webkit-inner-spin-button {
 }
 
 .tippy-box[data-theme~='light'] {
+  border-radius: initial;
+  background-color: var(--Amethyst-color);
   text-align: center;
   color: var(--white);
-  background-color: var(--Amethyst-color);
 }
 
 .tippy-box[data-theme~='light'][data-placement^='top'] > .tippy-arrow::before {
@@ -2060,33 +2061,14 @@ input::-webkit-inner-spin-button {
   width: 80%;
   height: 80%;
   object-fit: none;
-  transition: .4s ease-in-out;
-}
-
-.partnerh {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
+  filter: grayscale(100%) opacity(40%);
 }
 
 .partners__icon:hover
 .partner {
-  display: block;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transition: .4s ease-in-out;
-}
-
-.partners__icon:hover
-.partnerh {
-  display: block;
-  width: 80%;
-  height: 80%;
-  object-fit: none;
-  opacity: 1;
-  transition: .3s ease-in-out;
+  filter: none;
+  transition: .2s ease-in-out;
 }
 
 .partners__button-prev {
@@ -2157,8 +2139,9 @@ input::-webkit-inner-spin-button {
 }
 
 .contacts__block {
-  padding: 122px 0px 50px 160px;
-  max-width: 682px;
+  padding: 122px 0px 50px calc((100% - 1600px)/2);
+  /* max-width: 682px; */
+  max-width: calc(100% - 64.5%);
   width: 100%;
   border: 1px solid;
   border-color:  #cacaca #cacaca transparent transparent;
@@ -2386,6 +2369,10 @@ path {
   .painter__item {
     min-width: 700px;
   }
+  .contacts__block {
+    padding: 122px 0px 50px calc((100% - 1500px)/2);
+  }
+
 }
 
 @media (max-width: 1440px) {
@@ -2439,6 +2426,10 @@ path {
 
   .load-more:checked ~ .events__swiper .events__list .events__item:nth-child(1n + 4) {
     max-width: 385px;
+  }
+
+  .contacts__block {
+    padding: 122px 0px 50px calc((100% - 1300px)/2);
   }
 }
 
