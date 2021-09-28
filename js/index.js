@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const path = event.currentTarget.dataset.path
 
       document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
-        tabContent.classList.remove('focus-active')
+        tabContent.classList.remove('focus_active')
       });
       document.querySelectorAll('.painter__checklist-btn').forEach(function (tabContent) {
         tabContent.classList.remove('cheklist-btn_active')
       });
-      document.querySelector(`[data-target="${path}"]`).classList.add('focus-active')
+      document.querySelector(`[data-target="${path}"]`).classList.add('focus_active')
 
       step.classList.add('cheklist-btn_active')
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const gotoFocus = goto.getBoundingClientRect().top + pageYOffset;
         window.scrollTo({
           top:gotoFocus,
-          behavior: "smooth"
+          behavior: 'smooth'
         });
       };
     });
@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
     art.addEventListener('click', function (artClick) {
       const open = artClick.currentTarget.dataset.open
 
-      document.querySelectorAll('.gallery__focus_list').forEach(function (artContent) {
-        artContent.classList.remove('gallery__focus_active')
+      document.querySelectorAll('.modal__list').forEach(function (artContent) {
+        artContent.classList.remove('modal_active')
       });
-      document.querySelector(`[data-focus="${open}"]`).classList.add('gallery__focus_active')
+      document.querySelector(`[data-focus="${open}"]`).classList.add('modal_active')
       document.querySelector('body').classList.add('block')
     });
   });
 
-  document.querySelectorAll('.flags').forEach(function (step) {
+  document.querySelectorAll('.flag').forEach(function (step) {
     step.addEventListener('click', function (event) {
       const flag = event.currentTarget.dataset.flag
 
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
-        tabContent.classList.remove('focus-active')
+        tabContent.classList.remove('focus_active')
       });
 
-      document.querySelector(`[data-art="${flag}"]`).classList.add('focus-active');
+      document.querySelector(`[data-art="${flag}"]`).classList.add('focus_active');
       document.querySelectorAll(`[data-artist="${flag}"]`).forEach(el => {el.classList.add('artist-active')});
     });
   });
@@ -58,28 +58,28 @@ document.addEventListener('DOMContentLoaded', function () {
   //buttons
 
   const list = document.querySelectorAll('.item__btn');
-  const drop = document.querySelectorAll('.header__dropdown')
+  const drop = document.querySelectorAll('.row__dropdown')
   const searchBtn = document.querySelector('.search-visible')
-  const modalClouse = document.querySelectorAll('.gallery__focus_clouse');
-  const modalOverlay = document.querySelectorAll('.gallery__focus_item');
+  const modalClouse = document.querySelectorAll('.modal__btn-img');
+  const modalOverlay = document.querySelectorAll('.modal__item');
   const selectTitle = document.querySelector('.selection-cb__title')
   const burgerMenu = document.querySelector ('.burger');
   const select = document.querySelectorAll('.selection-cb__item');
   const selectInput = document.querySelectorAll('.selection-cb__item-in');
-  const flagActive = document.querySelectorAll('.flags')
+  const flagActive = document.querySelectorAll('.flag')
 
   list.forEach(el => {
     el.addEventListener('click', (e) => {
       list.forEach(el => {el.classList.remove(('button-active'))});
       e.currentTarget.classList.add('button-active');
       drop.forEach(el => {el.classList.remove(('dropdown-active'))})
-      e.currentTarget.closest('li').querySelector('.header__dropdown').classList.toggle('dropdown-active');
+      e.currentTarget.closest('li').querySelector('.row__dropdown').classList.toggle('dropdown-active');
     });
   });
 
      document.addEventListener('click', (e) => {
     // console.log(e.target)
-    if (!e.target.classList.contains('header__dropdown') && !e.target.classList.contains('item__btn')) {
+    if (!e.target.classList.contains('row__dropdown') && !e.target.classList.contains('item__btn')) {
       list.forEach(el => {el.classList.remove(('button-active'))});
       drop.forEach(el => {el.classList.remove(('dropdown-active'))})
     };
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   modalClouse.forEach (function (openModal) {
     openModal.addEventListener('click', (del) => {
-      modalOverlay.forEach(el => {el.classList.remove(('gallery__focus_active'))});
+      modalOverlay.forEach(el => {el.classList.remove(('modal_active'))});
       document.querySelector('body').classList.remove('block');
     });
   });
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   flagActive.forEach(el => {
     el.addEventListener('click', (e) => {
-      flagActive.forEach(el => {el.classList.remove(('flag__active'))});
-      e.currentTarget.classList.add(('flag__active'))});
+      flagActive.forEach(el => {el.classList.remove(('flag_active'))});
+      e.currentTarget.classList.add(('flag_active'))});
   });
 
 
@@ -148,16 +148,16 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     window.scrollTo({
       top: gotoLinks,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   };
 
   // swiper
   const swiper = document.querySelector('.banner-swiper')
   const swiperGallery = document.querySelector('.swiper-gallery')
-  const swiperPublication = document.querySelector('.publications__swiper')
+  const swiperPublication = document.querySelector('.publications-swiper')
   const swiperProjects = document.querySelector('.projects-swiper')
-  const swiperEvents = document.querySelector('.events__swiper')
+  const swiperEvents = document.querySelector('.events-swiper')
 
   let banner = new Swiper(swiper, {
     slidesPerView: 'auto',
@@ -421,6 +421,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Размещение геообъекта на карте.
     // myMap.geoObjects.add(myGeoObject);
     myMap.geoObjects.add(myPlacemark);
+
+    // myMap.controls.remove('zoomControl');
+    myMap.controls.remove('searchControl');
+    myMap.controls.remove('geolocation');
+    myMap.controls.remove('trafficControl');
+    myMap.controls.remove('mapTools');
   };
 
   var selector = document.querySelector("input[type='tel']");
@@ -479,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function () {
     maxWidth: 264,
   });
 
-  document.querySelectorAll('.header__dropdown').forEach(el=> {
+  document.querySelectorAll('.row__dropdown').forEach(el=> {
     new SimpleBar(el, {
       scrollbarMaxSize: 28,
     });
