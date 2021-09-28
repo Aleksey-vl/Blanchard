@@ -35,25 +35,25 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".about-us" href="#">О нас</a>
+              <a class="nav__link" data-link=".about-us" href="#">О нас</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".gallery" href="#">Галерея</a>
+              <a class="nav__link" data-link=".gallery" href="#">Галерея</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".catalogue" href="#">Каталог</a>
+              <a class="nav__link" data-link=".catalogue" href="#">Каталог</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".events" href="#">События</a>
+              <a class="nav__link" data-link=".events" href="#">События</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".publications" href="#">Издания</a>
+              <a class="nav__link" data-link=".publications" href="#">Издания</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".projects" href="#">Проекты</a>
+              <a class="nav__link" data-link=".projects" href="#">Проекты</a>
             </li>
             <li class="nav__item">
-              <a class="nav__item-text" data-link=".contacts" href="#">Контакты</a>
+              <a class="nav__link" data-link=".contacts" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -90,12 +90,12 @@
         </form>
       </div>
     </div>
-    <div class="header__row">
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
+    <div class="row header__row">
+      <nav class="row__nav">
+        <ul class="row__list">
+          <li class="row__item">
             <button class="item__btn">Реализм</button>
-            <ul class="header__dropdown">
+            <ul class="row__dropdown">
               <li class="dropdown__item img1">
                 <a class="dropdown__item-text" href="#">Тинторетто</a>
               </li>
@@ -110,9 +110,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__item">
+          <li class="row__item">
             <button class="item__btn">Импрессионизм</button>
-            <ul class="header__dropdown">
+            <ul class="row__dropdown">
               <li class="dropdown__item img5">
                 <a class="dropdown__item-text" href="#">Моне</a>
               </li>
@@ -133,9 +133,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__item">
+          <li class="row__item">
             <button class="item__btn">Постимпрессионизм</button>
-            <ul class="header__dropdown">
+            <ul class="row__dropdown">
               <li class="dropdown__item img9">
                 <a class="dropdown__item-text" href="#">Ван Гог</a>
               </li>
@@ -150,9 +150,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__item">
+          <li class="row__item">
             <button class="item__btn">Авангард</button>
-            <ul class="header__dropdown">
+            <ul class="row__dropdown">
               <li class="dropdown__item img13">
                 <a class="dropdown__item-text" href="#">Кандинский</a>
               </li>
@@ -167,9 +167,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__item">
+          <li class="row__item">
             <button class="item__btn">Футуризм</button>
-            <ul class="header__dropdown">
+            <ul class="row__dropdown">
               <li class="dropdown__item img17">
                 <a class="dropdown__item-text" href="#">Карра</a>
               </li>
@@ -243,20 +243,20 @@
     </section>
     <section class="gallery">
       <div class="container">
-        <div class="gallery__container">
+        <div class="gallery-container">
           <div class="gallery__block">
             <h2 class="title gallery__title">Галерея</h2>
-            <h3 class="filter__title">Фильтр:</h3>
+            <h3 class="choices-title">Фильтр:</h3>
             <select class="filter">
-              <option class="filter__select-item" value="">Живопись</option>
-              <option class="filter__select-item" value="">Рисунок</option>
-              <option class="filter__select-item" value="">Скульптура</option>
+              <option class="filter__item" value="">Живопись</option>
+              <option class="filter__item" value="">Рисунок</option>
+              <option class="filter__item" value="">Скульптура</option>
             </select>
           </div>
           <div class="swiper-container swiper-gallery">
             <div class="swiper-wrapper gallery__wrapper" aria-label="Картины известных художников" role="tablist">
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture1" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -270,7 +270,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery1.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture2" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -284,7 +284,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery2.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="Казимир Малевич" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -298,7 +298,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery3.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture4" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -312,7 +312,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery4.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture5" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -326,7 +326,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery5.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture6" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -340,7 +340,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery6.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture7" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -354,7 +354,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery7.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture8" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -368,7 +368,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery8.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture9" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -382,7 +382,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery9.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture10" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -396,7 +396,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery10.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture11" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -410,7 +410,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery11.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture12" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -424,7 +424,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery12.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture13" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -438,7 +438,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery13.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture14" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -452,7 +452,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery14.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture15" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -466,7 +466,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery15.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture16" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -480,7 +480,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery16.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture17" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -494,7 +494,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery17.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture18" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -508,7 +508,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery18.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture19" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -522,7 +522,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery19.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture20" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -536,7 +536,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery20.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture21" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -550,7 +550,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery21.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture22" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -564,7 +564,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery22.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture23" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -578,7 +578,7 @@
                 <img class="gallery__picture" src="./img/gallery/gallery23.jpg" alt="Картина художника">
               </div>
               <div class="swiper-slide gallery__pictures" aria-hidden="true" data-open="picture24" tabindex="0">
-                <div class="gallery__hover">
+                <div class="gallery__pictures-hover">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906"
                       transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white" />
@@ -602,624 +602,624 @@
           </p>
         </div>
       </div>
-      <ul class="gallery__focus_list" aria-hidden="true">
-        <li class="gallery__focus_item" data-focus="picture1">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery1.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+      <ul class="modal modal__list" aria-hidden="true">
+        <li class="modal__item" data-focus="picture1">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery1.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture2">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery2.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture2">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery2.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="Казимир Малевич">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery3.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="Казимир Малевич">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery3.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Казимир Малевич</h3>
-              <p class="name gallery__focus_name">“Женщина с граблями”</p>
-              <p class="year gallery__focus_year">1931-1932</p>
-              <p class="gallery__focus_text">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+              <h3 class="modal__title">Казимир Малевич</h3>
+              <p class="name modal__name">“Женщина с граблями”</p>
+              <p class="year modal__year">1931-1932</p>
+              <p class="modal__text">Картина из второй серии крестьянского цикла работ Казимира Малевича.
                 Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после
                 Берлинской и Варшавской выставок в 1927 году.</p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture4">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery4.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture4">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery4.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture5">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery5.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture5">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery5.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture6">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery6.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture6">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery6.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture7">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery7.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture7">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery7.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture8">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery8.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture8">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery8.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture9">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery9.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture9">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery9.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture10">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery10.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture10">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery10.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture11">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery11.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture11">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery11.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture12">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery12.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture12">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery12.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture13">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery13.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture13">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery13.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture14">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery14.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture14">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery14.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture15">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery15.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture15">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery15.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture16">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery16.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture16">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery16.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture17">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery17.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture17">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery17.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture18">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery18.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture18">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery18.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture19">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery19.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture19">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery19.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture20">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery20.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture20">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery20.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture21">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery21.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture21">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery21.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture22">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery22.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture22">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery22.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture23">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery23.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture23">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery23.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
-        <li class="gallery__focus_item" data-focus="picture24">
-          <div class="gallery__focus">
-            <img class="gallery__focus_img" src="./img/gallery/gallery24.jpg" alt="Картина художника">
-            <div class="gallery__focus_block">
-              <button class="gallery__focus_btn">
-                <span class="gallery__focus_clouse">X</span>
+        <li class="modal__item" data-focus="picture24">
+          <div class="modal-content">
+            <img class="modal__img" src="./img/gallery/gallery24.jpg" alt="Картина художника">
+            <div class="modal__about">
+              <button class="modal__btn">
+                <span class="modal__btn-img">X</span>
               </button>
-              <h3 class="gallery__focus_title">Что мы о нем знаем?</h3>
-              <p class="name gallery__focus_name"></p>
-              <p class="year gallery__focus_year"></p>
-              <p class="gallery__focus_text"></p>
+              <h3 class="modal__title">Что мы о нем знаем?</h3>
+              <p class="name modal__name"></p>
+              <p class="year modal__year"></p>
+              <p class="modal__text"></p>
             </div>
           </div>
         </li>
       </ul>
     </section>
     <section class="catalogue">
-      <div class="container catalogue__container">
-        <div class="catalogue__title">
-          <h2 class="title catalogue__title_text">Каталог</h2>
-          <div class="flags__block">
-            <button class="flags france" data-flag="france" aria-label="Язык перевода Франция"></button>
-            <button class="flags germany" data-flag="germany" aria-label="Германия"></button>
-            <button class="flags italy flag__active" data-flag="italy" aria-label="Италия"></button>
-            <button class="flags russia" data-flag="russia" aria-label="Россия"></button>
-            <button class="flags belgium" data-flag="belgium" aria-label="Бельгия"></button>
+      <div class="container catalogue-container">
+        <div class="catalogue__header">
+          <h2 class="title catalogue__title">Каталог</h2>
+          <div class="flags">
+            <button class="flag france" data-flag="france" aria-label="Художники Франции"></button>
+            <button class="flag germany" data-flag="germany" aria-label="Германии"></button>
+            <button class="flag italy flag_active" data-flag="italy" aria-label="Италии"></button>
+            <button class="flag russia" data-flag="russia" aria-label="России"></button>
+            <button class="flag belgium" data-flag="belgium" aria-label="Бельгии"></button>
           </div>
         </div>
-        <p class="text catalogue-text">Акционеры крупнейших компаний, которые представляют собой яркий пример
+        <p class="text catalogue__text">Акционеры крупнейших компаний, которые представляют собой яркий пример
           континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
           этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
           нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
           независимые элементы.
         </p>
-        <div class="catalog__accordion">
+        <div class="catalogue__painter">
           <div class="painter__focus" data-target="Бенедетто ди Биндо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бенедетто ди Биндо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бенедетто ди Биндо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Бергоньоне, Амброджо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бергоньоне, Амброджо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бергоньоне, Амброджо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Биссоло, Франческо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Биссоло, Франческо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Биссоло, Франческо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Больтраффио, Джованни">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Больтраффио, Джованни">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Больтраффио, Джованни">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Бонсиньори, Франческо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бонсиньори, Франческо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бонсиньори, Франческо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Боттичини, Рафаэлло">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Боттичини, Рафаэлло">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Боттичини, Рафаэлло">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Брамантино">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Брамантино">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Брамантино">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Бреа, Людовико">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бреа, Людовико">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бреа, Людовико">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Бьяджо д’Антонио Туччи">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бьяджо д’Антонио Туччи">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бьяджо д’Антонио Туччи">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Веккьетта">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Веккьетта">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Веккьетта">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Андреа Верроккьо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Андреа Верроккьо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Андреа Верроккьо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
-          <div class="painter__focus focus-active" data-target="Доменико Гирландайо" data-art="italy">
-            <img class="painter__focus_img" src="./img/catalog/Ghirlandaio.jpg" alt="Доменико Гирландайо">
-            <h3 class="painter__focus_title">Доменико Гирландайо</h3>
-            <p class="year painter__focus_year">2 июня 1448 — 11 января 1494.</p>
-            <p class="text painter__focus_text">Один из ведущих флорентийских художников
+          <div class="painter__focus focus_active" data-target="Доменико Гирландайо" data-art="italy">
+            <img class="painter__focus-img" src="./img/catalog/Ghirlandaio.jpg" alt="Доменико Гирландайо">
+            <h3 class="painter__focus-title">Доменико Гирландайо</h3>
+            <p class="year painter__focus-year">2 июня 1448 — 11 января 1494.</p>
+            <p class="text painter__focus-text">Один из ведущих флорентийских художников
               Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава
               художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками.
               Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь
               библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
           </div>
           <div class="painter__focus" data-target="Беноццо Гоццоли">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Беноццо Гоццоли">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Беноццо Гоццоли">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Граначчи, Франческо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Граначчи, Франческо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Граначчи, Франческо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Грегорио ди Чекко">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Грегорио ди Чекко">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Грегорио ди Чекко">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Джованни да Удине">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Джованни да Удине">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Джованни да Удине">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Джованни ди Паоло">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Джованни ди Паоло">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Джованни ди Паоло">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Джорджоне">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Джорджоне">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Джорджоне">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Парентино, Бернардо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Парентино, Бернардо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Парентино, Бернардо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Пезеллино">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Пезеллино">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Пезеллино">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Пьетро Перуджино">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Пьетро Перуджино">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Пьетро Перуджино">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Перуцци, Бальдассаре">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Перуцци, Бальдассаре">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Перуцци, Бальдассаре">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Пизанелло">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Пизанелло">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Пизанелло">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Пинтуриккьо">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Пинтуриккьо">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Пинтуриккьо">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Биго, Трофим" data-art="france">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Биго, Трофим">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Биго, Трофим">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Дюве, Жан">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Дюве, Жан">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Дюве, Жан">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Дюмустье, Жоффруа">
-            <img class="painter__focus_img" src="./img/catalog/Dumoustier.jpg" alt="Дюмустье, Жоффруа">
-            <h3 class="painter__focus_title">Жоффруа Дюмустье</h3>
-            <p class="year painter__focus_year">1500 (1510) — 13 октября 1573.</p>
-            <p class="text painter__focus_text">Художник драматического дарования, часто использовал резкие контрасты
+            <img class="painter__focus-img" src="./img/catalog/Dumoustier.jpg" alt="Дюмустье, Жоффруа">
+            <h3 class="painter__focus-title">Жоффруа Дюмустье</h3>
+            <p class="year painter__focus-year">1500 (1510) — 13 октября 1573.</p>
+            <p class="text painter__focus-text">Художник драматического дарования, часто использовал резкие контрасты
               света и тени, его работы отличаются повышенной экспрессивностью. Нервные штрихи переходят в небрежные
               пятна, автору свойственны широта восприятия мира и буйный темперамент.</p>
           </div>
           <div class="painter__focus" data-target="Кнеллер, Готфрид" data-art="germany">
-            <img class="painter__focus_img" src="./img/catalog/Godfrey_Kneller_Selfportrait.jpg" alt="Кнеллер, Готфрид">
-            <h3 class="painter__focus_title">Го́тфрид Кне́ллер</h3>
-            <p class="year painter__focus_year">8 августа 1646 — 19 октября 1723.</p>
-            <p class="text painter__focus_text">Cостоял до конца своей жизни королевским придворным живописцем и
+            <img class="painter__focus-img" src="./img/catalog/Godfrey_Kneller_Selfportrait.jpg" alt="Кнеллер, Готфрид">
+            <h3 class="painter__focus-title">Го́тфрид Кне́ллер</h3>
+            <p class="year painter__focus-year">8 августа 1646 — 19 октября 1723.</p>
+            <p class="text painter__focus-text">Cостоял до конца своей жизни королевским придворным живописцем и
               исполнял заказы, во множестве сыпавшиеся к нему со стороны английской знати. Большой успех имели его
               портреты десяти красавиц двора Вильгельма III, созданные в подражание аналогичной серии его
               предшественника Питера Лели. Для зала заседаний виговского клуба «Кит-Кэт» создал не менее сорока
               портретов его членов; этот формат портрета (чуть меньше поясного) получил название «кит-кэт».</p>
           </div>
           <div class="painter__focus" data-target="Лингельбах, Иоганн">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Лингельбах, Иоганн">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Лингельбах, Иоганн">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Прейслер, Даниэль">
-            <img class="painter__focus_img" src="./img/catalog/DanielPreiseler.jpg" alt="Прейслер, Даниэль">
-            <h3 class="painter__focus_title">Даниэль Прейслер</h3>
-            <p class="year painter__focus_year">1627 — 1665.</p>
-            <p class="text painter__focus_text">Основатель известного семейства немецких художников, выходцев из
+            <img class="painter__focus-img" src="./img/catalog/DanielPreiseler.jpg" alt="Прейслер, Даниэль">
+            <h3 class="painter__focus-title">Даниэль Прейслер</h3>
+            <p class="year painter__focus-year">1627 — 1665.</p>
+            <p class="text painter__focus-text">Основатель известного семейства немецких художников, выходцев из
               Богемии.Из его картин в особенности известны: «Смерть Авеля», «Сошествие Св. Духа» (в госпитальной церкви
               в Нюрнберге), «Вознесение Господне» (в дворцовой капелле в том же городе) и мужской портрет (в
               Брауншвейгской галерее).</p>
           </div>
           <div class="painter__focus" data-target="Флегель, Георг">
-            <img class="painter__focus_img" src="./img/catalog/Georg.jpg" alt="Флегель, Георг">
-            <h3 class="painter__focus_title">Георг Флегель</h3>
-            <p class="year painter__focus_year">1566 — 23 марта 1638.</p>
-            <p class="text painter__focus_text">Считается первым немецким художником, писавшим натюрморты, и одним из
+            <img class="painter__focus-img" src="./img/catalog/Georg.jpg" alt="Флегель, Георг">
+            <h3 class="painter__focus-title">Георг Флегель</h3>
+            <p class="year painter__focus-year">1566 — 23 марта 1638.</p>
+            <p class="text painter__focus-text">Считается первым немецким художником, писавшим натюрморты, и одним из
               крупнейших европейских мастеров этого жанра в начале XVII столетия. Также Флегель является создателем
               большого количества акварелей, изображающих цветы, зачастую в натуральную величину.</p>
           </div>
           <div class="painter__focus" data-target="Акимов, Иван Акимович" data-art="russia">
-            <img class="painter__focus_img" src="./img/catalog/Akimov_Ivan_Akimovich.jpg" alt="Акимов, Иван Акимович">
-            <h3 class="painter__focus_title">Ива́н Аки́мович Аки́мов</h3>
-            <p class="year painter__focus_year">22 мая (2 июня) 1755 — 5 (27) мая 1814.</p>
-            <p class="text painter__focus_text">Обладал преподавательским даром и имел весьма большое влияние на
+            <img class="painter__focus-img" src="./img/catalog/Akimov_Ivan_Akimovich.jpg" alt="Акимов, Иван Акимович">
+            <h3 class="painter__focus-title">Ива́н Аки́мович Аки́мов</h3>
+            <p class="year painter__focus-year">22 мая (2 июня) 1755 — 5 (27) мая 1814.</p>
+            <p class="text painter__focus-text">Обладал преподавательским даром и имел весьма большое влияние на
               образование русских исторических живописцев, хотя сам не был первоклассным художником, в частности, по
               своим произведениям ставился ниже своего современника Г. И. Угрюмова. Иван Акимович был, возможно, одним
               из первых историографов русского искусства. Хорошо известна его статья «Краткое историческое известие о
@@ -1227,52 +1227,52 @@
               литературой.</p>
           </div>
           <div class="painter__focus" data-target="Бельский, Алексей Иванович">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Бельский, Алексей Иванович">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бельский, Алексей Иванович">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Вишняков, Александр Иванович">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Вишняков, Александр Иванович">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Вишняков, Александр Иванович">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="Иванов, Андрей Иванович">
-            <img class="painter__focus_img" src="./img/catalog/Painter_Andrey_Ivanov.jpg" alt="Иванов, Андрей Иванович">
-            <h3 class="painter__focus_title">Иванов, Андрей Иванович</h3>
-            <p class="year painter__focus_year">1775 — 12 (24) июля 1848.</p>
-            <p class="text painter__focus_text">В живописи придерживался академической системы построения исторической
+            <img class="painter__focus-img" src="./img/catalog/Painter_Andrey_Ivanov.jpg" alt="Иванов, Андрей Иванович">
+            <h3 class="painter__focus-title">Иванов, Андрей Иванович</h3>
+            <p class="year painter__focus-year">1775 — 12 (24) июля 1848.</p>
+            <p class="text painter__focus-text">В живописи придерживался академической системы построения исторической
               картины. Его произведения, отличавшиеся прекрасным академическим рисунком и тонким колоритом, высоко
               ценились современниками. Андрей Иванович был выдающимся представителем старо-академической школы: отличный
               рисовальщик, прекрасно понимающий композицию, он писал свободно и в то же время добивался особого
               совершенства в моделировании формы.</p>
           </div>
           <div class="painter__focus" data-target="Лапин, Иван Фёдорович">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="Лапин, Иван Фёдорович">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Лапин, Иван Фёдорович">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <div class="painter__focus" data-target="#" data-art="belgium">
-            <img class="painter__focus_img" src="./img/catalog/test.svg" alt="#">
-            <h3 class="painter__focus_title">Что мы о нем знаем?</h3>
-            <p class="year painter__focus_year"></p>
-            <p class="text painter__focus_text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+            <img class="painter__focus-img" src="./img/catalog/test.svg" alt="#">
+            <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
+            <p class="year painter__focus-year"></p>
+            <p class="text painter__focus-text">Пока ничего... Зато мы точно знаем, что в галерее есть на что
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
           <ul class="painter__list" id="accordion">
             <li class="painter__item">
-              <div class="painter__list_heading top" aria-label="Деятели исскуства" role="tablist">
-                <h3 class="painter__list-title">C 1400 по 1499 гг.</h3>
-                <div class="painter__list-icon">
+              <div class="painter__heading top" aria-label="Деятели исскуства" role="tablist">
+                <h3 class="painter__title">C 1400 по 1499 гг.</h3>
+                <div class="painter__icon">
                   <span></span>
                 </div>
               </div>
@@ -1399,49 +1399,49 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1450,9 +1450,9 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top">
-                <h3 class="painter__list-title">C 1500 по 1599 гг.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top">
+                <h3 class="painter__title">C 1500 по 1599 гг.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
@@ -1472,49 +1472,49 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1523,20 +1523,20 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top">
-                <h3 class="painter__list-title">C 1600 по 1699 гг.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top">
+                <h3 class="painter__title">C 1600 по 1699 гг.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1562,37 +1562,37 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1601,44 +1601,44 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top">
-                <h3 class="painter__list-title">C 1700 по 1799 гг.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top">
+                <h3 class="painter__title">C 1700 по 1799 гг.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1669,13 +1669,13 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1684,68 +1684,68 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top">
-                <h3 class="painter__list-title">C 1800 по 1899 гг.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top">
+                <h3 class="painter__title">C 1800 по 1899 гг.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1754,68 +1754,68 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top">
-                <h3 class="painter__list-title">C 1900 по 1999 гг.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top">
+                <h3 class="painter__title">C 1900 по 1999 гг.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1824,68 +1824,68 @@
               </div>
             </li>
             <li class="painter__item">
-              <div class="painter__list_heading top bottom">
-                <h3 class="painter__list-title">C 2000 г.</h3>
-                <div class="painter__list-icon"></div>
+              <div class="painter__heading top bottom">
+                <h3 class="painter__title">C 2000 г.</h3>
+                <div class="painter__icon"></div>
               </div>
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__fall">
-                      <div class="fall_img-line">
-                        <div class="fall_img"></div>
+                    <div class="checklist-item__blank">
+                      <div class="blank">
+                        <div class="blank__cap"></div>
                       </div>
-                      <div class="fall_text_block">
-                        <h3 class="fall_title">Здесь пока пусто</h3>
-                        <p class="text fall_text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                      <div class="blank__content">
+                        <h3 class="blank__title">Здесь пока пусто</h3>
+                        <p class="text blank__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
                         <a class="link" data-link=".gallery" href="#">В галерею</a>
                       </div>
                     </div>
@@ -1901,7 +1901,7 @@
       <div class="container load-more-container">
         <input class="load-more" type="checkbox" id="load-more" />
         <h2 class="title">События</h2>
-        <div class="swiper-container events__swiper">
+        <div class="swiper-container events-swiper">
           <ul class="swiper-wrapper events__list">
             <li class="swiper-slide events__item">
               <div class="events__block">
@@ -1914,7 +1914,7 @@
                     художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 </div>
               </div>
-              <a href="" class="events__more">Подробнее</a>
+              <a class="events__more" href="#">Подробнее</a>
             </li>
             <li class="swiper-slide events__item">
               <div class="events__block">
@@ -1924,11 +1924,10 @@
                   <p class="year event__date">24 марта 19:00</p>
                   <h3 class="name event__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                   <p class="text focus-gallery__text">Высокий уровень вовлечения представителей целевой аудитории
-                    является
-                    четким доказательством простого факта.</p>
+                    является четким доказательством простого факта.</p>
                 </div>
               </div>
-              <a href="" class="events__more">Подробнее</a>
+              <a class="events__more" href="#">Подробнее</a>
             </li>
             <li class="swiper-slide events__item">
               <div class="events__block">
@@ -1938,11 +1937,10 @@
                   <p class="year event__date">с 31 марта по 21 апреля</p>
                   <h3 class="name event__name">Выставка «Формация 2020»</h3>
                   <p class="text focus-gallery__text">Идейные соображения высшего порядка, а также современная
-                    методология
-                    разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                    методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
                 </div>
               </div>
-              <a href="" class="events__more">Подробнее</a>
+              <a class="events__more" href="#">Подробнее</a>
             </li>
             <li class="swiper-slide events__item">
               <div class="events__block">
@@ -1956,7 +1954,7 @@
                   </p>
                 </div>
               </div>
-              <a href="" class="events__more">Подробнее</a>
+              <a class="events__more" href="#">Подробнее</a>
             </li>
             <li class="swiper-slide events__item">
               <div class="events__block">
@@ -1969,7 +1967,7 @@
                     художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 </div>
               </div>
-              <a href="" class="events__more">Подробнее</a>
+              <a class="events__more" href="#">Подробнее</a>
             </li>
           </ul>
           <div class="swiper-pagination events__pagination"></div>
@@ -2047,22 +2045,22 @@
               <span class="selection-cb__item-clouse"></span>
             </label>
           </form>
-          <h3 class="price__title">Цена</h3>
-          <div class="price__select">
-            <span class="price__select_text">От</span>
-            <input class="price__select_item" type="number" name="min-price" placeholder="50">
-            <span class="price__select_text">до</span>
-            <input class="price__select_item" type="number" name="max-price" placeholder="25 000">
-            <span class="price__select_text">руб</span>
+          <h3 class="price-title">Цена</h3>
+          <div class="price-select">
+            <span class="price-select__text">От</span>
+            <input class="price-select__item" type="number" name="min-price" placeholder="50">
+            <span class="price-select__text">до</span>
+            <input class="price-select__item" type="number" name="max-price" placeholder="25 000">
+            <span class="price-select__text">руб</span>
           </div>
         </div>
-        <div class="swiper-container publications__swiper">
+        <div class="swiper-container publications-swiper">
           <div class="swiper-wrapper publications__wrapper">
             <div class="swiper-slide publications__slide">
               <img class="pablic" src="./img/publications/pablic1.jpg" aria-label="Книга" alt="Книга Искусство цвета">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Искусство цвета
                   </h3>
                   <p class="order__text">
@@ -2077,7 +2075,7 @@
               <img class="pablic" src="./img/publications/pablic2.jpg" aria-label="Книга" alt="Книга Типографика">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Типографика
                   </h3>
                   <p class="order__text">
@@ -2092,7 +2090,7 @@
               <img class="pablic" src="./img/publications/pablic3.jpg" aria-label="Книга" alt="Книга Книга про буквы">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Книга про буквы
                   </h3>
                   <p class="order__text">
@@ -2107,7 +2105,7 @@
               <img class="pablic" src="./img/publications/pablic4.jpg" aria-label="Книга" alt="Книга Николай Ильин">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Николай Ильин
                   </h3>
                   <p class="order__text">
@@ -2123,7 +2121,7 @@
                 alt="Книга Модульные сетки в графическом дизайне">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Модульные сетки в графическом дизайне
                   </h3>
                   <p class="order__text">
@@ -2139,7 +2137,7 @@
                 alt="Книга Эволюция графических стилей">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Эволюция графических стилей
                   </h3>
                   <p class="order__text">
@@ -2155,7 +2153,7 @@
                 alt="Книга Искусство и визуальное восприятие">
               <div class="publications__block">
                 <div class="publications__text">
-                  <h3 class="publications__swiper__title">
+                  <h3 class="publications-swiper__title">
                     Искусство и визуальное восприятие
                   </h3>
                   <p class="order__text">
@@ -2188,35 +2186,35 @@
           <a class="link login__link" href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a>
         </p>
         <h3 class="projects-partners">Партнёры проектов:</h3>
-        <div class="projects__swiper_block">
+        <div class="projects-partners__block">
           <div class="projects-swiper swiper-container">
             <div class="swiper-wrapper projects__wrapper">
               <a class="swiper-slide partners__icon partner1" href="#">
-                <img class="partner" src="/img/projects/partner1.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner1.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner2" href="#">
-                <img class="partner" src="/img/projects/partner2.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner2.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner3" href="#">
-                <img class="partner" src="/img/projects/partner3.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner3.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner4" href="#">
-                <img class="partner" src="/img/projects/partner4.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner4.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner5" href="#">
-                <img class="partner" src="/img/projects/partner5.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner5.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner6" href="#">
-                <img class="partner" src="/img/projects/partner6.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner6.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner7" href="#">
-                <img class="partner" src="/img/projects/partner7.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner7.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner8" href="#">
-                <img class="partner" src="/img/projects/partner8.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner8.png" alt="Партнер проектов">
               </a>
               <a class="swiper-slide partners__icon partner9" href="#">
-                <img class="partner" src="/img/projects/partner9.png" alt="Партнер проектов">
+                <img class="partner" src="./img/projects/partner9.png" alt="Партнер проектов">
               </a>
             </div>
           </div>
@@ -2234,15 +2232,15 @@
             <h3 class="projects-partners contacts__office">Шоурум №2</h3>
             <address class="year contacts__address">Леонтьевский переулок, дом 5/1</address>
             <h3 class="feedback-title">Заказать обратный звонок</h3>
-            <form class="feedback-block" action="#">
+            <form class="feedback-block" action="" method="POST">
               <label>
-                <span class="feedback-block_tultip">
+                <span class="feedback-block__tultip">
                   <input class="feedback-block__text" type="text" name="name" placeholder="Имя*"
                     data-validate-field="name">
                 </span>
               </label>
               <label>
-                <span class="feedback-block_tultip">
+                <span class="feedback-block__tultip">
                   <input class="feedback-block__text tel" type="tel" name="tel" placeholder="Телефон*"
                     data-validate-field="tel">
                 </span>
