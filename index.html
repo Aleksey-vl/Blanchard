@@ -94,8 +94,8 @@
       <nav class="row__nav">
         <ul class="row__list">
           <li class="row__item">
-            <button class="item__btn">Реализм</button>
-            <ul class="row__dropdown">
+            <button class="row__btn">Реализм</button>
+            <ul class="dropdown">
               <li class="dropdown__item img1">
                 <a class="dropdown__item-text" href="#">Тинторетто</a>
               </li>
@@ -111,8 +111,8 @@
             </ul>
           </li>
           <li class="row__item">
-            <button class="item__btn">Импрессионизм</button>
-            <ul class="row__dropdown">
+            <button class="row__btn">Импрессионизм</button>
+            <ul class="dropdown">
               <li class="dropdown__item img5">
                 <a class="dropdown__item-text" href="#">Моне</a>
               </li>
@@ -134,8 +134,8 @@
             </ul>
           </li>
           <li class="row__item">
-            <button class="item__btn">Постимпрессионизм</button>
-            <ul class="row__dropdown">
+            <button class="row__btn">Постимпрессионизм</button>
+            <ul class="dropdown">
               <li class="dropdown__item img9">
                 <a class="dropdown__item-text" href="#">Ван Гог</a>
               </li>
@@ -151,8 +151,8 @@
             </ul>
           </li>
           <li class="row__item">
-            <button class="item__btn">Авангард</button>
-            <ul class="row__dropdown">
+            <button class="row__btn">Авангард</button>
+            <ul class="dropdown">
               <li class="dropdown__item img13">
                 <a class="dropdown__item-text" href="#">Кандинский</a>
               </li>
@@ -168,8 +168,8 @@
             </ul>
           </li>
           <li class="row__item">
-            <button class="item__btn">Футуризм</button>
-            <ul class="row__dropdown">
+            <button class="row__btn">Футуризм</button>
+            <ul class="dropdown">
               <li class="dropdown__item img17">
                 <a class="dropdown__item-text" href="#">Карра</a>
               </li>
@@ -211,7 +211,7 @@
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
             новых предложений.
           </p>
-          <a class="btn banner__btn" href="#contacts">
+          <a class="btn banner__btn" data-link=".contacts" href="#">
             Подписаться на рассылку
           </a>
         </div>
@@ -602,7 +602,7 @@
           </p>
         </div>
       </div>
-      <ul class="modal modal__list" aria-hidden="true">
+      <ul class="modal" aria-hidden="true">
         <li class="modal__item" data-focus="picture1">
           <div class="modal-content">
             <img class="modal__img" src="./img/gallery/gallery1.jpg" alt="Картина художника">
@@ -961,7 +961,7 @@
           нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
           независимые элементы.
         </p>
-        <div class="catalogue__painter">
+        <div class="painter">
           <div class="painter__focus" data-target="Бенедетто ди Биндо">
             <img class="painter__focus-img" src="./img/catalog/test.svg" alt="Бенедетто ди Биндо">
             <h3 class="painter__focus-title">Что мы о нем знаем?</h3>
@@ -1050,7 +1050,7 @@
               посмотреть!</p>
             <a class="link" data-link=".gallery" href="#">В галерею</a>
           </div>
-          <div class="painter__focus focus_active" data-target="Доменико Гирландайо" data-art="italy">
+          <div class="painter__focus focus-active" data-target="Доменико Гирландайо" data-art="italy">
             <img class="painter__focus-img" src="./img/catalog/Ghirlandaio.jpg" alt="Доменико Гирландайо">
             <h3 class="painter__focus-title">Доменико Гирландайо</h3>
             <p class="year painter__focus-year">2 июня 1448 — 11 января 1494.</p>
@@ -1334,7 +1334,7 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <button class="painter__checklist-btn cheklist-btn_active" data-path="Доменико Гирландайо">
+                    <button class="painter__checklist-btn painter-active" data-path="Доменико Гирландайо">
                       Доменико Гирландайо
                     </button>
                   </li>
@@ -1399,8 +1399,8 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1411,8 +1411,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1423,8 +1423,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1435,8 +1435,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1472,8 +1472,8 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1484,8 +1484,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1496,8 +1496,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1508,8 +1508,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1530,8 +1530,8 @@
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1562,8 +1562,8 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1574,8 +1574,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1586,8 +1586,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1608,8 +1608,8 @@
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1620,8 +1620,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1632,8 +1632,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1669,8 +1669,8 @@
                     </button>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1691,8 +1691,8 @@
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1703,8 +1703,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1715,8 +1715,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1727,8 +1727,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1739,8 +1739,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1761,8 +1761,8 @@
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1773,8 +1773,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1785,8 +1785,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1797,8 +1797,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1809,8 +1809,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1831,8 +1831,8 @@
               <div class="painter__list-text">
                 <ul class="painter__checklist">
                   <li class="painter__checklist-item" data-artist="france">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1843,8 +1843,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="germany">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1855,8 +1855,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item artist-active" data-artist="italy">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1867,8 +1867,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="russia">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1879,8 +1879,8 @@
                     </div>
                   </li>
                   <li class="painter__checklist-item" data-artist="belgium">
-                    <div class="checklist-item__blank">
-                      <div class="blank">
+                    <div class="blank">
+                      <div class="blank__img">
                         <div class="blank__cap"></div>
                       </div>
                       <div class="blank__content">
@@ -1907,10 +1907,10 @@
               <div class="events__block">
                 <img class="events__img event1" src="./img/events/event1.jpg" alt="Книжная гравюра в живом восприятии">
                 <div class="events__about">
-                  <p class="year event__place">Музей им. Щусева</p>
-                  <p class="year event__date">с 20 марта по 30 апреля</p>
-                  <h3 class="name event__name">Книжная гравюра в живом восприятии</h3>
-                  <p class="text focus-gallery__text">Один из ведущих флорентийских художников Кватроченто, основатель
+                  <p class="year events__place">Музей им. Щусева</p>
+                  <p class="year events__date">с 20 марта по 30 апреля</p>
+                  <h3 class="name events__name">Книжная гравюра в живом восприятии</h3>
+                  <p class="text events__text">Один из ведущих флорентийских художников Кватроченто, основатель
                     художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 </div>
               </div>
@@ -1920,10 +1920,10 @@
               <div class="events__block">
               <img class="events__img event2" src="./img/events/event2.jpg" alt="Дмитрий Петров и Сергей Ильин">
                 <div class="events__about">
-                  <p class="year event__place">ММОМА</p>
-                  <p class="year event__date">24 марта 19:00</p>
-                  <h3 class="name event__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-                  <p class="text focus-gallery__text">Высокий уровень вовлечения представителей целевой аудитории
+                  <p class="year events__place">ММОМА</p>
+                  <p class="year events__date">24 марта 19:00</p>
+                  <h3 class="name events__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                  <p class="text events__text">Высокий уровень вовлечения представителей целевой аудитории
                     является четким доказательством простого факта.</p>
                 </div>
               </div>
@@ -1933,10 +1933,10 @@
               <div class="events__block">
                 <img class="events__img event3" src="./img/events/event3.jpg" alt="Выставка «Формация 2020»">
                 <div class="events__about">
-                  <p class="year event__place">Еврейский музей</p>
-                  <p class="year event__date">с 31 марта по 21 апреля</p>
-                  <h3 class="name event__name">Выставка «Формация 2020»</h3>
-                  <p class="text focus-gallery__text">Идейные соображения высшего порядка, а также современная
+                  <p class="year events__place">Еврейский музей</p>
+                  <p class="year events__date">с 31 марта по 21 апреля</p>
+                  <h3 class="name events__name">Выставка «Формация 2020»</h3>
+                  <p class="text events__text">Идейные соображения высшего порядка, а также современная
                     методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
                 </div>
               </div>
@@ -1946,10 +1946,10 @@
               <div class="events__block">
                 <img class="events__img event4" src="./img/events/event4.jpg" alt="Картина из Третьяковки на Крымском валу">
                 <div class="events__about">
-                  <p class="year event__place">Третьяковка на Крымском валу</p>
-                  <p class="year event__date">с 30 марта по 30 апреля</p>
-                  <h3 class="name event__name">XXIV Международная биеннале молодого искусства</h3>
-                  <p class="text focus-gallery__text">Внезапно, реплицированные с зарубежных источников, современные
+                  <p class="year events__place">Третьяковка на Крымском валу</p>
+                  <p class="year events__date">с 30 марта по 30 апреля</p>
+                  <h3 class="name events__name">XXIV Международная биеннале молодого искусства</h3>
+                  <p class="text events__text">Внезапно, реплицированные с зарубежных источников, современные
                     исследования.
                   </p>
                 </div>
@@ -1960,10 +1960,10 @@
               <div class="events__block">
                 <img class="events__img event5" src="./img/events/event5.jpg" alt="Фотография из серии «Метафора серебра">
                 <div class="events__about">
-                  <p class="year event__place">ММАМ</p>
-                  <p class="year event__date">с 8 апреля по 20 мая</p>
-                  <h3 class="name event__name">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                  <p class="text focus-gallery__text">Один из ведущих флорентийских художников Кватроченто, основатель
+                  <p class="year events__place">ММАМ</p>
+                  <p class="year events__date">с 8 апреля по 20 мая</p>
+                  <h3 class="name events__name">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                  <p class="text events__text">Один из ведущих флорентийских художников Кватроченто, основатель
                     художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 </div>
               </div>
@@ -1979,11 +1979,11 @@
       </div>
     </section>
     <section class="publications">
-      <div class="container publications__container">
-        <div class="publication__contant">
+      <div class="container publications-container">
+        <div class="publications__genre">
           <h2 class="title publications__title">Издания</h2>
-          <h3 class="selection-cb__title">Категории:</h3>
-          <form class="selection-cb selection-cb__list" action="#">
+          <h3 class="selection-title">Категории:</h3>
+          <form class="selection-cb" action="#">
             <input class="selection-cb__item-in" type="checkbox" id="item1">
             <label class="selection-cb__item" for="item1">
               <span class="selection-cb__item-text">Бестселлеры</span>
@@ -2057,111 +2057,111 @@
         <div class="swiper-container publications-swiper">
           <div class="swiper-wrapper publications__wrapper">
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic1.jpg" aria-label="Книга" alt="Книга Искусство цвета">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <img class="publications__img" src="./img/publications/pablic1.jpg" aria-label="Книга" alt="Книга Искусство цвета">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Искусство цвета
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Иттен, Иоханнес
                   </p>
                   <p class="price">620 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic2.jpg" aria-label="Книга" alt="Книга Типографика">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <img class="publications__img" src="./img/publications/pablic2.jpg" aria-label="Книга" alt="Книга Типографика">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Типографика
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Рудер, Эмиль
                   </p>
                   <p class="price">2 450 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic3.jpg" aria-label="Книга" alt="Книга Книга про буквы">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <img class="publications__img" src="./img/publications/pablic3.jpg" aria-label="Книга" alt="Книга Книга про буквы">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Книга про буквы
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Гордон, Юрий
                   </p>
                   <p class="price">2 200 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic4.jpg" aria-label="Книга" alt="Книга Николай Ильин">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <img class="publications__img" src="./img/publications/pablic4.jpg" aria-label="Книга" alt="Книга Николай Ильин">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Николай Ильин
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Кричевский, Владимир
                   </p>
                   <p class="price">1 100 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic5.jpg" aria-label="Книга"
+              <img class="publications__img" src="./img/publications/pablic5.jpg" aria-label="Книга"
                 alt="Книга Модульные сетки в графическом дизайне">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Модульные сетки в графическом дизайне
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Мюллер-Брокманн, Йозеф
                   </p>
                   <p class="price">1 450 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide ">
-              <img class="pablic" src="./img/publications/pablic6.jpg" aria-label="Книга"
+              <img class="publications__img" src="./img/publications/pablic6.jpg" aria-label="Книга"
                 alt="Книга Эволюция графических стилей">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Эволюция графических стилей
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Хеллер, Чваст
                   </p>
                   <p class="price">3 200 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
             <div class="swiper-slide publications__slide">
-              <img class="pablic" src="./img/publications/pablic7.jpg" aria-label="Книга"
+              <img class="publications__img" src="./img/publications/pablic7.jpg" aria-label="Книга"
                 alt="Книга Искусство и визуальное восприятие">
-              <div class="publications__block">
-                <div class="publications__text">
-                  <h3 class="publications-swiper__title">
+              <div class="publications-content">
+                <div class="publications-content__text">
+                  <h3 class="publications-content__title">
                     Искусство и визуальное восприятие
                   </h3>
-                  <p class="order__text">
+                  <p class="publications-content__author">
                     Арнхейм, Рудольф
                   </p>
                   <p class="price">2 200 руб</p>
                 </div>
-                <a class="btn btn__text" href="#">Заказать</a>
+                <a class="btn publications-content__btn" href="#">Заказать</a>
               </div>
             </div>
           </div>
@@ -2183,43 +2183,43 @@
           маркетинговых и финансовых <span class="tulltip tulltip3" tabindex="0">i</span> предпосылок. Банальные, но неопровержимые
           выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь,
           должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
-          <a class="link login__link" href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a>
+          <a class="link" href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a>
         </p>
-        <h3 class="projects-partners">Партнёры проектов:</h3>
-        <div class="projects-partners__block">
+        <h3 class="partners">Партнёры проектов:</h3>
+        <div class="partners-block">
           <div class="projects-swiper swiper-container">
             <div class="swiper-wrapper projects__wrapper">
-              <a class="swiper-slide partners__icon partner1" href="#">
+              <a class="swiper-slide partners-icon partner1" href="#">
                 <img class="partner" src="./img/projects/partner1.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner2" href="#">
+              <a class="swiper-slide partners-icon partner2" href="#">
                 <img class="partner" src="./img/projects/partner2.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner3" href="#">
+              <a class="swiper-slide partners-icon partner3" href="#">
                 <img class="partner" src="./img/projects/partner3.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner4" href="#">
+              <a class="swiper-slide partners-icon partner4" href="#">
                 <img class="partner" src="./img/projects/partner4.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner5" href="#">
+              <a class="swiper-slide partners-icon partner5" href="#">
                 <img class="partner" src="./img/projects/partner5.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner6" href="#">
+              <a class="swiper-slide partners-icon partner6" href="#">
                 <img class="partner" src="./img/projects/partner6.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner7" href="#">
+              <a class="swiper-slide partners-icon partner7" href="#">
                 <img class="partner" src="./img/projects/partner7.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner8" href="#">
+              <a class="swiper-slide partners-icon partner8" href="#">
                 <img class="partner" src="./img/projects/partner8.png" alt="Партнер проектов">
               </a>
-              <a class="swiper-slide partners__icon partner9" href="#">
+              <a class="swiper-slide partners-icon partner9" href="#">
                 <img class="partner" src="./img/projects/partner9.png" alt="Партнер проектов">
               </a>
             </div>
           </div>
-          <button class="swiper-button-prev partners__button-prev" aria-label="Предыдущий слайд"></button>
-          <button class="swiper-button-next partners__button-next" aria-label="Следующий слайд"></button>
+          <button class="swiper-button-prev partners-button-prev" aria-label="Предыдущий слайд"></button>
+          <button class="swiper-button-next partners-button-next" aria-label="Следующий слайд"></button>
         </div>
       </div>
     </section>
@@ -2232,14 +2232,14 @@
             <h3 class="projects-partners contacts__office">Шоурум №2</h3>
             <address class="year contacts__address">Леонтьевский переулок, дом 5/1</address>
             <h3 class="feedback-title">Заказать обратный звонок</h3>
-            <form class="feedback-block" action="" method="POST">
-              <label>
+            <form class="feedback-block" action="./js/mail.php" method="POST">
+              <label class="feedback-block__input">
                 <span class="feedback-block__tultip">
                   <input class="feedback-block__text" type="text" name="name" placeholder="Имя*"
                     data-validate-field="name">
                 </span>
               </label>
-              <label>
+              <label class="feedback-block__input">
                 <span class="feedback-block__tultip">
                   <input class="feedback-block__text tel" type="tel" name="tel" placeholder="Телефон*"
                     data-validate-field="tel">
@@ -2247,7 +2247,7 @@
               </label>
               <button class="btn contacts__btn">Заказать</button>
             </form>
-            <h3 class="feedback-title messenger__title">Связаться в один клик</h3>
+            <h3 class="feedback-title messenger-title">Связаться в один клик</h3>
             <ul class="icon-block">
               <li class="messenger-icon">
                 <a class="feedback-icon" href="#" aria-label="whatsapp">

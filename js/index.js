@@ -6,37 +6,39 @@ document.addEventListener('DOMContentLoaded', function () {
       const path = event.currentTarget.dataset.path
 
       document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
-        tabContent.classList.remove('focus_active')
+        tabContent.classList.remove('focus-active')
       });
       document.querySelectorAll('.painter__checklist-btn').forEach(function (tabContent) {
-        tabContent.classList.remove('cheklist-btn_active')
+        tabContent.classList.remove('painter-active')
       });
-      document.querySelector(`[data-target="${path}"]`).classList.add('focus_active')
+      document.querySelector(`[data-target="${path}"]`).classList.add('focus-active')
 
-      step.classList.add('cheklist-btn_active')
+      step.classList.add('painter-active')
 
-      if (window.matchMedia('(max-width: 812px)').matches){
+      if (window.matchMedia('(max-width: 812px)').matches) {
         const goto = document.querySelector(`[data-target="${path}"]`);
         const gotoFocus = goto.getBoundingClientRect().top + pageYOffset;
         window.scrollTo({
-          top:gotoFocus,
+          top: gotoFocus,
           behavior: 'smooth'
         });
       };
     });
   });
 
-  document.querySelectorAll('.gallery__pictures').forEach(function (art) {
-    art.addEventListener('click', function (artClick) {
-      const open = artClick.currentTarget.dataset.open
+  if (window.matchMedia('(min-width: 812px)').matches) {
+    document.querySelectorAll('.gallery__pictures').forEach(function (art) {
+      art.addEventListener('click', function (artClick) {
+        const open = artClick.currentTarget.dataset.open
 
-      document.querySelectorAll('.modal__list').forEach(function (artContent) {
-        artContent.classList.remove('modal_active')
+        document.querySelectorAll('.modal__list').forEach(function (artContent) {
+          artContent.classList.remove('modal_active')
+        });
+        document.querySelector(`[data-focus="${open}"]`).classList.add('modal_active')
+        document.querySelector('body').classList.add('block')
       });
-      document.querySelector(`[data-focus="${open}"]`).classList.add('modal_active')
-      document.querySelector('body').classList.add('block')
     });
-  });
+  };
 
   document.querySelectorAll('.flag').forEach(function (step) {
     step.addEventListener('click', function (event) {
@@ -47,41 +49,47 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       document.querySelectorAll('.painter__focus').forEach(function (tabContent) {
-        tabContent.classList.remove('focus_active')
+        tabContent.classList.remove('focus-active')
       });
 
-      document.querySelector(`[data-art="${flag}"]`).classList.add('focus_active');
-      document.querySelectorAll(`[data-artist="${flag}"]`).forEach(el => {el.classList.add('artist-active')});
+      document.querySelector(`[data-art="${flag}"]`).classList.add('focus-active');
+      document.querySelectorAll(`[data-artist="${flag}"]`).forEach(el => { el.classList.add('artist-active') });
+    });
+  });
+
+  document.querySelectorAll('.dropdown').forEach(el => {
+    new SimpleBar(el, {
+      scrollbarMaxSize: 28,
     });
   });
 
   //buttons
 
-  const list = document.querySelectorAll('.item__btn');
-  const drop = document.querySelectorAll('.row__dropdown')
+  const list = document.querySelectorAll('.row__btn');
+  const drop = document.querySelectorAll('.dropdown')
   const searchBtn = document.querySelector('.search-visible')
   const modalClouse = document.querySelectorAll('.modal__btn-img');
   const modalOverlay = document.querySelectorAll('.modal__item');
-  const selectTitle = document.querySelector('.selection-cb__title')
-  const burgerMenu = document.querySelector ('.burger');
+  const selectTitle = document.querySelector('.selection-title')
+  const burgerMenu = document.querySelector('.burger');
   const select = document.querySelectorAll('.selection-cb__item');
   const selectInput = document.querySelectorAll('.selection-cb__item-in');
   const flagActive = document.querySelectorAll('.flag')
 
   list.forEach(el => {
     el.addEventListener('click', (e) => {
-      list.forEach(el => {el.classList.remove(('button-active'))});
+      list.forEach(el => { el.classList.remove(('button-active')) });
       e.currentTarget.classList.add('button-active');
-      drop.forEach(el => {el.classList.remove(('dropdown-active'))})
-      e.currentTarget.closest('li').querySelector('.row__dropdown').classList.toggle('dropdown-active');
+      drop.forEach(el => { el.classList.remove(('dropdown-active')) })
+      e.currentTarget.closest('li').querySelector('.dropdown').classList.toggle('dropdown-active');
     });
   });
 
-     document.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
     // console.log(e.target)
-    if (!e.target.classList.contains('row__dropdown') && !e.target.classList.contains('item__btn')) {
-      list.forEach(el => {el.classList.remove(('button-active'))});
-      drop.forEach(el => {el.classList.remove(('dropdown-active'))})
+    if (!e.target.classList.contains('dropdown') && !e.target.classList.contains('row__btn')) {
+      list.forEach(el => { el.classList.remove(('button-active')) });
+      drop.forEach(el => { el.classList.remove(('dropdown-active')) })
     };
   });
 
@@ -107,18 +115,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.account-btn').classList.toggle('visible');
   });
 
-  modalClouse.forEach (function (openModal) {
+  modalClouse.forEach(function (openModal) {
     openModal.addEventListener('click', (del) => {
-      modalOverlay.forEach(el => {el.classList.remove(('modal_active'))});
+      modalOverlay.forEach(el => { el.classList.remove(('modal_active')) });
       document.querySelector('body').classList.remove('block');
     });
   });
 
-  selectTitle.addEventListener('click', function() {
+  selectTitle.addEventListener('click', function () {
     select.forEach(el =>
       el.classList.toggle('selection-cb__visual')
     );
-    selectTitle.classList.toggle('selection-cb__title_active');
+    selectTitle.classList.toggle('selection-title_active');
   });
 
   // selectInput.forEach(el => {
@@ -129,8 +137,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   flagActive.forEach(el => {
     el.addEventListener('click', (e) => {
-      flagActive.forEach(el => {el.classList.remove(('flag_active'))});
-      e.currentTarget.classList.add(('flag_active'))});
+      flagActive.forEach(el => { el.classList.remove(('flag_active')) });
+      e.currentTarget.classList.add(('flag_active'))
+    });
   });
 
 
@@ -141,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuLink.addEventListener('click', (clickLink));
   });
 
-   function clickLink(e) {
+  function clickLink(e) {
     const menuLink = e.target;
     const gotoLink = document.querySelector(menuLink.dataset.link);
     const gotoLinks = gotoLink.getBoundingClientRect().top + pageYOffset;
@@ -446,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
         required: true,
         function: (name, value) => {
           const phone = selector.inputmask.unmaskedvalue()
-          console.log(phone)
+          // console.log(phone)
           return Number(phone) && phone.length === 10
         }
       },
@@ -462,9 +471,28 @@ document.addEventListener('DOMContentLoaded', function () {
       tel: 'Укажите ваш телефон',
     },
 
-    colorWrong: '#FF5C00'
-  });
+    colorWrong: '#FF5C00',
 
+    submitHandler: function (form) {
+      let formData = new FormData(form);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      form.reset();
+    },
+
+  });
 
   //tulltip
   tippy('.tulltip1', {
@@ -483,12 +511,6 @@ document.addEventListener('DOMContentLoaded', function () {
     content: 'В стремлении повысить качество',
     theme: 'light',
     maxWidth: 264,
-  });
-
-  document.querySelectorAll('.row__dropdown').forEach(el=> {
-    new SimpleBar(el, {
-      scrollbarMaxSize: 28,
-    });
   });
 
 })
